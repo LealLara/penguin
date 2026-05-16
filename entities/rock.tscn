@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bpop5cleg0y4b" path="res://sprites/tiles/Rock_shape (16 x 16).png" id="1_cr78g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cr78g"]
-radius = 6.0827627
+radius = 5.0990195
 
 [node name="rock" type="StaticBody2D" unique_id=1599028295]
 
@@ -11,5 +11,6 @@ radius = 6.0827627
 texture = ExtResource("1_cr78g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1066892790]
+visible = false
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_cr78g")
