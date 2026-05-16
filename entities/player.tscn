@@ -111,7 +111,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1612425544]
+[node name="pinguino" type="CharacterBody2D" unique_id=1612425544]
 script = ExtResource("1_merdl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1066166901]
@@ -123,9 +123,10 @@ sprite_frames = SubResource("SpriteFrames_i623q")
 animation = &"jump"
 autoplay = "walk"
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=419109831]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1891075427]
 limit_left = 0
 limit_top = 0
-limit_right = 299
+limit_right = 320
 limit_bottom = 200
 position_smoothing_enabled = true
+position_smoothing_speed = 2.0

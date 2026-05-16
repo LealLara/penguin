@@ -2,3 +2,4 @@ res://entities/plant.tscn
 res://scenes/game.tscn
 res://entities/rock.tscn
 res://entities/player.tscn
+res://entities/player.gd
