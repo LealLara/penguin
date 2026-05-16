@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://caeedau44cx4c"]
+
+[ext_resource type="Texture2D" uid="uid://bx5u762ej1phn" path="res://sprites/grassland/Extra_plants (16 x 16).png" id="1_usxpk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mncn7"]
+radius = 11.0
+height = 22.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bbf0"]
+size = Vector2(8.5, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1mub"]
+size = Vector2(33, 5.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6j4ds"]
+size = Vector2(29.375, 11)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=931999081]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=453650110]
+position = Vector2(1.9073486e-06, -9.536743e-07)
+scale = Vector2(0.70625, 0.75)
+texture = ExtResource("1_usxpk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1329666924]
+position = Vector2(-29, -6)
+shape = SubResource("CapsuleShape2D_mncn7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1800052466]
+position = Vector2(-28.25, 7.5)
+shape = SubResource("RectangleShape2D_3bbf0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=3251379]
+position = Vector2(-28.5, 15.25)
+shape = SubResource("RectangleShape2D_t1mub")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=1459607954]
+position = Vector2(22.3125, 11.5)
+shape = SubResource("RectangleShape2D_6j4ds")

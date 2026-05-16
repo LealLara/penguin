@@ -1,4 +1,2 @@
+res://entities/plant.tscn
 res://scenes/game.tscn
-res://entities/player.tscn
-res://entities/player.gd
-res://entities/rock.tscn
