@@ -1,11 +1,11 @@
-TileMapLayer
+AnimatedSprite2D
 Sprite2D
-Parallax2D
-ParallaxBackground
 ParallaxLayer
+ParallaxBackground
+TileMapLayer
+Parallax2D
 Node2D
 Camera2D
 StaticBody2D
 CollisionShape2D
-AnimatedSprite2D
 CharacterBody2D

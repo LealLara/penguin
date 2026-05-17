@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4hdpw8i18tqr"
-path="res://.godot/imported/4 - Background_clouds.png-7677617e0b28b44239d39539d844c95f.ctex"
+path="res://.godot/imported/3 - Background_clouds.png-d0d91f86a75bc66c97442dd8ac7cddaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tropics/Background parts/4 - Background_clouds.png"
-dest_files=["res://.godot/imported/4 - Background_clouds.png-7677617e0b28b44239d39539d844c95f.ctex"]
+source_file="res://sprites/tropics/Background parts/3 - Background_clouds.png"
+dest_files=["res://.godot/imported/3 - Background_clouds.png-d0d91f86a75bc66c97442dd8ac7cddaf.ctex"]
 
 [params]
 
