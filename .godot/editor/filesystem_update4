@@ -6,3 +6,4 @@ res://entities/player.gd
 res://tiles/decoration.tres
 res://scenes/forest.tscn
 res://tiles/grass.tres
+res://scenes/tropic.tscn
