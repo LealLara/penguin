@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779054424
+::res://::1779056617
 icon.svg::CompressedTexture2D::2656019919714988769::1778935295::1778935301::1::::<><><>0<>0<>81144df665c89c59affe1a0660a2960a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1778954150::0::1::::<><><>0<>0<><>::
 ::res://entities/::1779047110
@@ -7,10 +7,10 @@ plant.tscn::PackedScene::4781347136007797304::1778962403::0::1::::<><><>0<>0<><>
 player.gd::GDScript::4423391645166639995::1778967422::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.tscn::PackedScene::2498129936726336618::1779047110::0::1::::<><><>0<>0<><>::uid://b4ayu461n8v3x::::res://entities/player.gd<>uid://xk0nt7o1aphx::::res://sprites/penguin/Idle (16 x 16).png<>uid://e6yw4o5fsjg::::res://sprites/penguin/Waddling (16 x 16).png<>uid://baxcmwaxa784k::::res://sprites/penguin/Jump (16 x 16).png
 rock.tscn::PackedScene::973808785677176765::1778962383::0::1::::<><><>0<>0<><>::uid://bpop5cleg0y4b::::res://sprites/tiles/Rock_shape (16 x 16).png
-::res://scenes/::1779053494
+::res://scenes/::1779055666
 forest.tscn::PackedScene::4654839604768240352::1779022073::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://yhj03pep81u5::::res://sprites/autumn forest/Background parts/6 - Distant_trees.png<>uid://0m10rvj4de0d::::res://sprites/autumn forest/Background parts/5 - Tree_row_BG_2.png<>uid://by0wkk4m48wtq::::res://sprites/autumn forest/Background parts/4 - Tree_row_BG_1.png<>uid://sb622wcxnde7::::res://sprites/autumn forest/Background parts/3 - Bottom_leaf_piles.png<>uid://bo7qbq3xgsopn::::res://sprites/autumn forest/Background parts/2 - Trees.png<>uid://cptqxnfc1fsvd::::res://sprites/autumn forest/Background parts/1 - Leaf_top.png
 game.tscn::PackedScene::2554234286320288132::1778973033::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://bwo55gy7t3vrd::::res://tiles/decoration.tres
-tropical.tscn::PackedScene::1149975879894882267::1779053494::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://bwo55gy7t3vrd::::res://tiles/decoration.tres<>uid://d3wqeilxhkojy::::res://sprites/tropics/Background parts/5 - Sky_color.png<>uid://dsn3feldp7etg::::res://sprites/tropics/Background parts/4 - Floating_clouds.png<>uid://c4hdpw8i18tqr::::res://sprites/tropics/Background parts/3 - Background_clouds.png<>uid://ctstp3b73pc7a::::res://sprites/tropics/Background parts/2 - Waters_version_2.png<>uid://dgl2cguckliaa::::res://sprites/tropics/Background parts/1 - Waters_version_1.png
+tropical.tscn::PackedScene::1149975879894882267::1779055666::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://bwo55gy7t3vrd::::res://tiles/decoration.tres<>uid://d3wqeilxhkojy::::res://sprites/tropics/Background parts/5 - Sky_color.png<>uid://dsn3feldp7etg::::res://sprites/tropics/Background parts/4 - Floating_clouds.png<>uid://c4hdpw8i18tqr::::res://sprites/tropics/Background parts/3 - Background_clouds.png<>uid://ctstp3b73pc7a::::res://sprites/tropics/Background parts/2 - Waters_version_2.png<>uid://dgl2cguckliaa::::res://sprites/tropics/Background parts/1 - Waters_version_1.png
 ::res://scripts/::1778936184
 ::res://sprites/::1779055069
 ::res://sprites/autumn forest/::1778956947
@@ -35,12 +35,12 @@ _Complete_static_BG_(288 x 208).png::CompressedTexture2D::3815971852225971053::1
 3 - Cloud_cover_1.png::CompressedTexture2D::7476442882415189149::1778956853::1778956947::1::::<><><>0<>0<>e0aa9b339e354249cf5e88fceca1998a<>res://.godot/imported/3 - Cloud_cover_1.png-20e8fc7241f5da3912e150cf33c2b8b3.ctex::
 4 - Cloud_cover_2.png::CompressedTexture2D::2822632851350668943::1778956853::1778956947::1::::<><><>0<>0<>a578caa1051e900001379d3060277b42<>res://.godot/imported/4 - Cloud_cover_2.png-c8a389e6f465e8495a2692e80eb49f9d.ctex::
 5 - Sky_color.png::CompressedTexture2D::171436375303750544::1778956853::1778956947::1::::<><><>0<>0<>197a559470ecd75041f8542ce75516e8<>res://.godot/imported/5 - Sky_color.png-c9232736c15606db3e918d12ade518f5.ctex::
-::res://sprites/nature/::1779055063
+::res://sprites/nature/::1779055073
 Assets_shadow_source.png::CompressedTexture2D::1855338294189564248::1779055062::1779055073::1::::<><><>0<>0<>17caf50bf219445901ac17f308b86a6d<>res://.godot/imported/Assets_shadow_source.png-62df627f4def15bed962534425bb0b1a.ctex::
 Assets_source.png::CompressedTexture2D::4121966598977084442::1779055062::1779055073::1::::<><><>0<>0<>0816ed46e11b6fcbab54220513eb6fae<>res://.godot/imported/Assets_source.png-05e2449b8f3743d624d2543dc32dd28b.ctex::
 Assets_texture_shadow_dark_source.png::CompressedTexture2D::7959218398328008763::1779055062::1779055073::1::::<><><>0<>0<>8af7323deaf073e4192afc6db75fac34<>res://.godot/imported/Assets_texture_shadow_dark_source.png-71b95bf571037f7f4cdd3ba0bb909dbd.ctex::
 Assets_texture_shadow_source.png::CompressedTexture2D::2492911144468402518::1779055062::1779055073::1::::<><><>0<>0<>72c74b77322378060a634f143a3680dd<>res://.godot/imported/Assets_texture_shadow_source.png-36bbb8d3996649b06af1c366e91d1dc1.ctex::
-::res://sprites/nature/Assets/::1779055063
+::res://sprites/nature/Assets/::1779055074
 Autumn_bush1.png::CompressedTexture2D::2547295896529753690::1779055062::1779055074::1::::<><><>0<>0<>76404e004e5e22d650fd0816e08f2035<>res://.godot/imported/Autumn_bush1.png-93b492c29208c2d9271b5bf8b02cdd56.ctex::
 Autumn_bush2.png::CompressedTexture2D::5208229127354108655::1779055062::1779055074::1::::<><><>0<>0<>e93663826565654c7a65ff707628352e<>res://.godot/imported/Autumn_bush2.png-017a2d056e1373278aa5d4d5bc57bf65.ctex::
 Autumn_bush3.png::CompressedTexture2D::7384229181709079010::1779055062::1779055074::1::::<><><>0<>0<>9e68039b6f63f40fc76fe36a08ce8bef<>res://.godot/imported/Autumn_bush3.png-b7c9d0257f149471ad78da8b338d3feb.ctex::
@@ -81,7 +81,7 @@ Fern2_3.png::CompressedTexture2D::7658278396962681610::1779055063::1779055074::1
 Snow_bush1.png::CompressedTexture2D::8027022210764296867::1779055063::1779055074::1::::<><><>0<>0<>2044311b63d0301059886af03b0933fa<>res://.godot/imported/Snow_bush1.png-2c520e12fd7f99fed66711911b98d19e.ctex::
 Snow_bush2.png::CompressedTexture2D::652645258557141061::1779055063::1779055074::1::::<><><>0<>0<>1801fd62535df1f50bc492a451b53fc0<>res://.godot/imported/Snow_bush2.png-e562dc3fd2cb6703f1db24095de98380.ctex::
 Snow_bush3.png::CompressedTexture2D::7167722671774735261::1779055063::1779055074::1::::<><><>0<>0<>a9912559f2e3c2f979f3f9cd9f279939<>res://.godot/imported/Snow_bush3.png-8b6a63b28b121cad3fdbbb08acb74a20.ctex::
-::res://sprites/nature/Assets_shadow/::1779055063
+::res://sprites/nature/Assets_shadow/::1779055074
 Autumn_bush1.png::CompressedTexture2D::5945497736140237326::1779055063::1779055074::1::::<><><>0<>0<>5c397ef7c3b1cd74143d1d5f7c0d4c62<>res://.godot/imported/Autumn_bush1.png-5d612d639256c5f3c4ca4f67d85b7b0b.ctex::
 Autumn_bush2.png::CompressedTexture2D::7231203890671083548::1779055063::1779055074::1::::<><><>0<>0<>d8b1f1a441ca6b5fddd23aa53bdc52e5<>res://.godot/imported/Autumn_bush2.png-2b86631676d916de38e9a50b5ea6211d.ctex::
 Autumn_bush3.png::CompressedTexture2D::4272637603849265970::1779055063::1779055074::1::::<><><>0<>0<>0f47f0151702051d4c1afded8145be16<>res://.godot/imported/Autumn_bush3.png-dff8bf92104da478106ae0f2db7884b3.ctex::
@@ -122,7 +122,7 @@ Fern2_3.png::CompressedTexture2D::7437721925963813836::1779055063::1779055074::1
 Snow_bush1.png::CompressedTexture2D::8215491039407134363::1779055063::1779055074::1::::<><><>0<>0<>c12f1247ed66e1cf7471eb25316ab1d2<>res://.godot/imported/Snow_bush1.png-9b02380dccd366e0cefa59d8c487face.ctex::
 Snow_bush2.png::CompressedTexture2D::8937986237722684683::1779055063::1779055074::1::::<><><>0<>0<>0d8e6b4fb07957f17c40e9ad0b4a9813<>res://.godot/imported/Snow_bush2.png-da3d303a5a597b5b8c52de1977fb9f84.ctex::
 Snow_bush3.png::CompressedTexture2D::5111609991576795521::1779055063::1779055074::1::::<><><>0<>0<>bbaa425001991853edddef0ad4613a11<>res://.godot/imported/Snow_bush3.png-7fee1da9409559a86817bc701c6f5286.ctex::
-::res://sprites/nature/Assets_texture_shadow/::1779055063
+::res://sprites/nature/Assets_texture_shadow/::1779055074
 Autumn_bush1.png::CompressedTexture2D::2067480431979143363::1779055063::1779055074::1::::<><><>0<>0<>f938cf4dc1af91851a30d54703b9a3b3<>res://.godot/imported/Autumn_bush1.png-e9a20222742d968627e696de3ea7b18a.ctex::
 Autumn_bush2.png::CompressedTexture2D::421017156919694628::1779055063::1779055074::1::::<><><>0<>0<>616f3eec305e96979ec4bf5f8498c009<>res://.godot/imported/Autumn_bush2.png-dd9fa4b7ae366c921126c178853a137e.ctex::
 Autumn_bush3.png::CompressedTexture2D::6606058521071533446::1779055063::1779055073::1::::<><><>0<>0<>a20852caf7e35c12811e84ee4b303060<>res://.godot/imported/Autumn_bush3.png-2c494845cff70173923af6f8d6f58db6.ctex::
@@ -163,7 +163,7 @@ Fern2_3.png::CompressedTexture2D::4600424103157080823::1779055063::1779055073::1
 Snow_bush1.png::CompressedTexture2D::455416722512307785::1779055063::1779055073::1::::<><><>0<>0<>9f59946efaf13803edd0bff47ce349c6<>res://.godot/imported/Snow_bush1.png-909efaece47df2febedc50d1a594ea1b.ctex::
 Snow_bush2.png::CompressedTexture2D::807901320415887890::1779055063::1779055073::1::::<><><>0<>0<>3efcdbe7ee8f581e80cc724878ec7c70<>res://.godot/imported/Snow_bush2.png-a7e7f0599e0236f644ff83a255658f1a.ctex::
 Snow_bush3.png::CompressedTexture2D::7064927944750525296::1779055063::1779055073::1::::<><><>0<>0<>3b4ea9c1ee91ed5e20612b278ee36cee<>res://.godot/imported/Snow_bush3.png-181d28fbab74b5acfb6c327330643429.ctex::
-::res://sprites/nature/Assets_texture_shadow_dark/::1779055064
+::res://sprites/nature/Assets_texture_shadow_dark/::1779055074
 Autumn_bush1.png::CompressedTexture2D::1283182116118694341::1779055063::1779055073::1::::<><><>0<>0<>ea627367715070c020f19d0e7e6e2da0<>res://.godot/imported/Autumn_bush1.png-6e1e148dc4297a01ec255df9c7d24a04.ctex::
 Autumn_bush2.png::CompressedTexture2D::7147233502358478822::1779055063::1779055073::1::::<><><>0<>0<>8321ae536656c5c9d4b411fe37c09cf2<>res://.godot/imported/Autumn_bush2.png-9042cf8c5477cc6aca2f4d40ea78ba57.ctex::
 Autumn_bush3.png::CompressedTexture2D::2742882360042741613::1779055063::1779055073::1::::<><><>0<>0<>3c64daaeea01ac911322306bf636db4d<>res://.godot/imported/Autumn_bush3.png-17bd988d08ca4a9ff835c7fc094f814d.ctex::
@@ -251,6 +251,6 @@ _Complete_static_BG_(288 x 208).png::CompressedTexture2D::7972001118078718480::1
 1 - Snowy_foreground_area.png::CompressedTexture2D::5713891935170739017::1778956853::1778956947::1::::<><><>0<>0<>9e6140b2c4bd143560c87058f7bd20a5<>res://.godot/imported/1 - Snowy_foreground_area.png-16c70d5eeb9183b8e719dd80108234d3.ctex::
 2 - Smaller_mountains.png::CompressedTexture2D::6613171437823231802::1778956853::1778956947::1::::<><><>0<>0<>834a2231cf4963226e6f205f083b70f0<>res://.godot/imported/2 - Smaller_mountains.png-b7ba9116bf84d1b330f655c01ad741f3.ctex::
 3 - Big_mountain_BG.png::CompressedTexture2D::7555812000900049706::1778956853::1778956947::1::::<><><>0<>0<>c116e7f7d3601750dd52d8f4f502b3ec<>res://.godot/imported/3 - Big_mountain_BG.png-0750adeb6f0898fa5b9413a09537d297.ctex::
-::res://tiles/::1779053494
-decoration.tres::TileSet::3961351969582647337::1779053494::0::1::::<><><>0<>0<><>::uid://dqktoc4ddaha5::::res://sprites/grassland/Grassland_entities (16 x 16).png<>uid://p3sojunuoam6::::res://sprites/supplier/supplies_objects.png<>uid://bko0jnuffkbsi::::res://sprites/tiles/Flowers (16 x 16).png<>uid://dvotmyvvj1vgf::::res://sprites/tiles/House (112 x 96).png<>uid://fqgvc36by20g::::res://sprites/tropics/Tropics_entities (16 x 16).png
-grass.tres::TileSet::3023858217162892405::1779046019::0::1::::<><><>0<>0<><>::uid://ckjikipotbcmx::::res://sprites/grassland/Terrain (16 x 16).png<>uid://bv53aedie6xuu::::res://sprites/autumn forest/Terrain (16 x 16).png<>uid://bgtlxsvdqn65::::res://sprites/tropics/Terrain (16 x 16).png
+::res://tiles/::1779055666
+decoration.tres::TileSet::3961351969582647337::1779055666::0::1::::<><><>0<>0<><>::uid://dqktoc4ddaha5::::res://sprites/grassland/Grassland_entities (16 x 16).png<>uid://p3sojunuoam6::::res://sprites/supplier/supplies_objects.png<>uid://bko0jnuffkbsi::::res://sprites/tiles/Flowers (16 x 16).png<>uid://dvotmyvvj1vgf::::res://sprites/tiles/House (112 x 96).png<>uid://fqgvc36by20g::::res://sprites/tropics/Tropics_entities (16 x 16).png<>uid://1o0feevvjrvs::::res://sprites/nature/Assets_shadow_source.png
+grass.tres::TileSet::3023858217162892405::1779055532::0::1::::<><><>0<>0<><>::uid://ckjikipotbcmx::::res://sprites/grassland/Terrain (16 x 16).png<>uid://bv53aedie6xuu::::res://sprites/autumn forest/Terrain (16 x 16).png<>uid://bgtlxsvdqn65::::res://sprites/tropics/Terrain (16 x 16).png
