@@ -1,13 +1,16 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778957101
+::res://::1779028929
 icon.svg::CompressedTexture2D::2656019919714988769::1778935295::1778935301::1::::<><><>0<>0<>81144df665c89c59affe1a0660a2960a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1778954150::0::1::::<><><>0<>0<><>::
-::res://entities/::1778956396
-player.gd::GDScript::4423391645166639995::1778953546::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::2498129936726336618::1778953546::0::1::::<><><>0<>0<><>::uid://b4ayu461n8v3x::::res://entities/player.gd<>uid://xk0nt7o1aphx::::res://sprites/penguin/Idle (16 x 16).png<>uid://e6yw4o5fsjg::::res://sprites/penguin/Waddling (16 x 16).png<>uid://baxcmwaxa784k::::res://sprites/penguin/Jump (16 x 16).png
-rock.tscn::PackedScene::973808785677176765::1778956396::0::1::::<><><>0<>0<><>::uid://bpop5cleg0y4b::::res://sprites/tiles/Rock_shape (16 x 16).png
-::res://scenes/::1778956459
-game.tscn::PackedScene::2554234286320288132::1778956459::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://n4yquvbys8cf::::res://entities/rock.tscn
+::res://entities/::1778973875
+plant.tscn::PackedScene::4781347136007797304::1778962403::0::1::::<><><>0<>0<><>::uid://bx5u762ej1phn::::res://sprites/grassland/Extra_plants (16 x 16).png
+player.gd::GDScript::4423391645166639995::1778967422::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::2498129936726336618::1778973875::0::1::::<><><>0<>0<><>::uid://b4ayu461n8v3x::::res://entities/player.gd<>uid://xk0nt7o1aphx::::res://sprites/penguin/Idle (16 x 16).png<>uid://e6yw4o5fsjg::::res://sprites/penguin/Waddling (16 x 16).png<>uid://baxcmwaxa784k::::res://sprites/penguin/Jump (16 x 16).png
+rock.tscn::PackedScene::973808785677176765::1778962383::0::1::::<><><>0<>0<><>::uid://bpop5cleg0y4b::::res://sprites/tiles/Rock_shape (16 x 16).png
+::res://scenes/::1779028681
+forest.tscn::PackedScene::4654839604768240352::1779022073::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://yhj03pep81u5::::res://sprites/autumn forest/Background parts/6 - Distant_trees.png<>uid://0m10rvj4de0d::::res://sprites/autumn forest/Background parts/5 - Tree_row_BG_2.png<>uid://by0wkk4m48wtq::::res://sprites/autumn forest/Background parts/4 - Tree_row_BG_1.png<>uid://sb622wcxnde7::::res://sprites/autumn forest/Background parts/3 - Bottom_leaf_piles.png<>uid://bo7qbq3xgsopn::::res://sprites/autumn forest/Background parts/2 - Trees.png<>uid://cptqxnfc1fsvd::::res://sprites/autumn forest/Background parts/1 - Leaf_top.png
+game.tscn::PackedScene::2554234286320288132::1778973033::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://bwo55gy7t3vrd::::res://tiles/decoration.tres
+tropic.tscn::PackedScene::1261355873227585682::1779028681::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://bwo55gy7t3vrd::::res://tiles/decoration.tres
 ::res://scripts/::1778936184
 ::res://sprites/::1778956917
 ::res://sprites/autumn forest/::1778956947
@@ -77,3 +80,6 @@ _Complete_static_BG_(288 x 208).png::CompressedTexture2D::7972001118078718480::1
 1 - Snowy_foreground_area.png::CompressedTexture2D::5713891935170739017::1778956853::1778956947::1::::<><><>0<>0<>9e6140b2c4bd143560c87058f7bd20a5<>res://.godot/imported/1 - Snowy_foreground_area.png-16c70d5eeb9183b8e719dd80108234d3.ctex::
 2 - Smaller_mountains.png::CompressedTexture2D::6613171437823231802::1778956853::1778956947::1::::<><><>0<>0<>834a2231cf4963226e6f205f083b70f0<>res://.godot/imported/2 - Smaller_mountains.png-b7ba9116bf84d1b330f655c01ad741f3.ctex::
 3 - Big_mountain_BG.png::CompressedTexture2D::7555812000900049706::1778956853::1778956947::1::::<><><>0<>0<>c116e7f7d3601750dd52d8f4f502b3ec<>res://.godot/imported/3 - Big_mountain_BG.png-0750adeb6f0898fa5b9413a09537d297.ctex::
+::res://tiles/::1779028681
+decoration.tres::TileSet::3961351969582647337::1779028681::0::1::::<><><>0<>0<><>::uid://dqktoc4ddaha5::::res://sprites/grassland/Grassland_entities (16 x 16).png<>uid://bko0jnuffkbsi::::res://sprites/tiles/Flowers (16 x 16).png<>uid://dvotmyvvj1vgf::::res://sprites/tiles/House (112 x 96).png<>uid://fqgvc36by20g::::res://sprites/tropics/Tropics_entities (16 x 16).png
+grass.tres::TileSet::3023858217162892405::1779025689::0::1::::<><><>0<>0<><>::uid://ckjikipotbcmx::::res://sprites/grassland/Terrain (16 x 16).png<>uid://bv53aedie6xuu::::res://sprites/autumn forest/Terrain (16 x 16).png<>uid://bgtlxsvdqn65::::res://sprites/tropics/Terrain (16 x 16).png

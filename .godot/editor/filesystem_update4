@@ -1,9 +1,0 @@
-res://entities/plant.tscn
-res://scenes/game.tscn
-res://entities/rock.tscn
-res://entities/player.tscn
-res://entities/player.gd
-res://tiles/decoration.tres
-res://scenes/forest.tscn
-res://tiles/grass.tres
-res://scenes/tropic.tscn
