@@ -11,6 +11,9 @@
 [sub_resource type="TileMapPattern" id="TileMapPattern_4pksi"]
 tile_data = PackedInt32Array(65536, 3, 0, 1, 65538, 1, 65537, 65539, 0, 2, 65538, 1, 65538, 131075, 0, 3, 327682, 1, 65539, 196611, 0, 65540, 131075, 0, 5, 65538, 1, 65541, 196611, 0, 6, 65538, 5)
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_lb8v8"]
+tile_data = PackedInt32Array(131072, 3, 0, 131073, 3, 0, 131075, 131075, 0, 131076, 196611, 0, 131077, 196610, 5, 65542, 589826, 1, 131078, 54, 3, 65543, 65538, 1, 65544, 327682, 1, 131080, 54, 3, 65545, 589826, 1, 65546, 65538, 1, 131082, 54, 3, 131083, 54, 3, 131085, 131075, 0, 14, 4, 0, 131086, 3, 0, 131088, 131075, 0, 131089, 327682, 5, 65554, 65538, 1, 131090, 327682, 5, 65555, 65538, 1, 131091, 131075, 0, 20, 1376310, 5, 65556, 1572918, 3, 131092, 1572918, 3, 21, 1572918, 3, 65557, 589826, 1, 131093, 1572918, 3, 22, 1572918, 3, 65558, 1572918, 3, 131094, 131126, 5, 23, 1179702, 3, 65559, 983094, 0, 131095, 131126, 5, 24, 983094, 0, 131096, 983094, 0, 65561, 65538, 1, 131097, 3, 0, 131098, 1572918, 3, 65563, 983094, 0, 131099, 917558, 3, 65564, 983094, 0, 131100, 196611, 0)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjahj"]
 texture = ExtResource("1_b4fdq")
 0:0/size_in_atlas = Vector2i(3, 4)
@@ -360,9 +363,12 @@ texture = ExtResource("1_4pksi")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
 texture = ExtResource("2_k56fq")
 0:0/0 = 0
+0:0/0/z_index = 1
 1:0/0 = 0
+1:0/0/z_index = 2
 2:0/0 = 0
 3:0/0 = 0
+3:0/0/z_index = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gee14"]
 texture = ExtResource("3_b4fdq")
@@ -435,6 +441,7 @@ texture = ExtResource("6_hjahj")
 12:0/0/z_index = 2
 15:0/size_in_atlas = Vector2i(3, 3)
 15:0/0 = 0
+15:0/0/z_index = 3
 18:0/size_in_atlas = Vector2i(3, 3)
 18:0/0 = 0
 21:0/size_in_atlas = Vector2i(3, 3)
@@ -459,6 +466,7 @@ texture = ExtResource("6_hjahj")
 0:5/0 = 0
 2:5/size_in_atlas = Vector2i(2, 2)
 2:5/0 = 0
+2:5/0/z_index = 1
 4:5/size_in_atlas = Vector2i(2, 2)
 4:5/0 = 0
 6:5/size_in_atlas = Vector2i(2, 2)
@@ -487,3 +495,4 @@ sources/0 = SubResource("TileSetAtlasSource_hjahj")
 sources/54 = SubResource("TileSetAtlasSource_lb8v8")
 sources/1 = SubResource("TileSetAtlasSource_3sstm")
 pattern_0 = SubResource("TileMapPattern_4pksi")
+pattern_1 = SubResource("TileMapPattern_lb8v8")
