@@ -37,7 +37,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
 
 [node name="clouds" type="ParallaxLayer" parent="sky-Background" unique_id=2110378383]
-motion_scale = Vector2(1.2, 1.2)
+motion_scale = Vector2(1.1, 1.1)
 motion_mirroring = Vector2(288, 0)
 
 [node name="floating-clouds" type="Sprite2D" parent="sky-Background/clouds" unique_id=114115124]
