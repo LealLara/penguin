@@ -4,6 +4,7 @@
 [ext_resource type="TileSet" uid="uid://bjc1rdrx0xogj" path="res://tiles/grass.tres" id="2_lnu2h"]
 [ext_resource type="TileSet" uid="uid://bwo55gy7t3vrd" path="res://tiles/decoration.tres" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://d3wqeilxhkojy" path="res://sprites/tropics/Background parts/5 - Sky_color.png" id="4_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://dsn3feldp7etg" path="res://sprites/tropics/Background parts/4 - Floating_clouds.png" id="5_iywne"]
 
 [node name="Game" type="Node2D" unique_id=1410612698]
 
@@ -28,9 +29,20 @@ tile_set = ExtResource("3_lbhrr")
 motion_scale = Vector2(0, 0)
 motion_mirroring = Vector2(288, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="sky-Background/sky" unique_id=52050342]
+[node name="bluesky" type="Sprite2D" parent="sky-Background/sky" unique_id=52050342]
 texture_repeat = 2
 texture = ExtResource("4_lbhrr")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="clouds" type="ParallaxLayer" parent="sky-Background" unique_id=2110378383]
+motion_scale = Vector2(1.2, 1.2)
+motion_mirroring = Vector2(288, 0)
+
+[node name="floating-clouds" type="Sprite2D" parent="sky-Background/clouds" unique_id=114115124]
+texture_repeat = 2
+texture = ExtResource("5_iywne")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
