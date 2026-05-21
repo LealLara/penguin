@@ -38,11 +38,12 @@ _Complete_static_BG_(288 x 208).png::CompressedTexture2D::3815971852225971053::1
 3 - Cloud_cover_1.png::CompressedTexture2D::7476442882415189149::1778956853::1778956947::1::::<><><>0<>0<>e0aa9b339e354249cf5e88fceca1998a<>res://.godot/imported/3 - Cloud_cover_1.png-20e8fc7241f5da3912e150cf33c2b8b3.ctex::
 4 - Cloud_cover_2.png::CompressedTexture2D::2822632851350668943::1778956853::1778956947::1::::<><><>0<>0<>a578caa1051e900001379d3060277b42<>res://.godot/imported/4 - Cloud_cover_2.png-c8a389e6f465e8495a2692e80eb49f9d.ctex::
 5 - Sky_color.png::CompressedTexture2D::171436375303750544::1778956853::1778956947::1::::<><><>0<>0<>197a559470ecd75041f8542ce75516e8<>res://.godot/imported/5 - Sky_color.png-c9232736c15606db3e918d12ade518f5.ctex::
-::res://sprites/nature/::1779295278
+::res://sprites/nature/::1779327448
 Assets_shadow_source.png::CompressedTexture2D::1855338294189564248::1779055062::1779055073::1::::<><><>0<>0<>17caf50bf219445901ac17f308b86a6d<>res://.godot/imported/Assets_shadow_source.png-62df627f4def15bed962534425bb0b1a.ctex::
 Assets_source.png::CompressedTexture2D::4121966598977084442::1779055062::1779055073::1::::<><><>0<>0<>0816ed46e11b6fcbab54220513eb6fae<>res://.godot/imported/Assets_source.png-05e2449b8f3743d624d2543dc32dd28b.ctex::
 Assets_texture_shadow_dark_source.png::CompressedTexture2D::7959218398328008763::1779055062::1779055073::1::::<><><>0<>0<>8af7323deaf073e4192afc6db75fac34<>res://.godot/imported/Assets_texture_shadow_dark_source.png-71b95bf571037f7f4cdd3ba0bb909dbd.ctex::
 Assets_texture_shadow_source.png::CompressedTexture2D::2492911144468402518::1779055062::1779055073::1::::<><><>0<>0<>72c74b77322378060a634f143a3680dd<>res://.godot/imported/Assets_texture_shadow_source.png-36bbb8d3996649b06af1c366e91d1dc1.ctex::
+Dinosaur_skeleton_full_dark_shadow.png::CompressedTexture2D::5672262504189684746::1779327448::1779327449::1::::<><><>0<>0<>fe1b7405e9ffee7295c785a14b66fb4a<>res://.godot/imported/Dinosaur_skeleton_full_dark_shadow.png-8556af8ce8c74dd87dccaee6e661d0cf.ctex::
 Plants.png::CompressedTexture2D::5728919456446827282::1779295278::1779295278::1::::<><><>0<>0<>e745538b22069682bfdc3cda2fdf305f<>res://.godot/imported/Plants.png-e1619c1017dc44284e6e5335d59ab0b8.ctex::
 ::res://sprites/nature/Assets/::1779055074
 Autumn_bush1.png::CompressedTexture2D::2547295896529753690::1779055062::1779055074::1::::<><><>0<>0<>76404e004e5e22d650fd0816e08f2035<>res://.godot/imported/Autumn_bush1.png-93b492c29208c2d9271b5bf8b02cdd56.ctex::
@@ -167,7 +168,7 @@ Fern2_3.png::CompressedTexture2D::4600424103157080823::1779055063::1779055073::1
 Snow_bush1.png::CompressedTexture2D::455416722512307785::1779055063::1779055073::1::::<><><>0<>0<>9f59946efaf13803edd0bff47ce349c6<>res://.godot/imported/Snow_bush1.png-909efaece47df2febedc50d1a594ea1b.ctex::
 Snow_bush2.png::CompressedTexture2D::807901320415887890::1779055063::1779055073::1::::<><><>0<>0<>3efcdbe7ee8f581e80cc724878ec7c70<>res://.godot/imported/Snow_bush2.png-a7e7f0599e0236f644ff83a255658f1a.ctex::
 Snow_bush3.png::CompressedTexture2D::7064927944750525296::1779055063::1779055073::1::::<><><>0<>0<>3b4ea9c1ee91ed5e20612b278ee36cee<>res://.godot/imported/Snow_bush3.png-181d28fbab74b5acfb6c327330643429.ctex::
-::res://sprites/nature/Assets_texture_shadow_dark/::1779055074
+::res://sprites/nature/Assets_texture_shadow_dark/::1779327430
 Autumn_bush1.png::CompressedTexture2D::1283182116118694341::1779055063::1779055073::1::::<><><>0<>0<>ea627367715070c020f19d0e7e6e2da0<>res://.godot/imported/Autumn_bush1.png-6e1e148dc4297a01ec255df9c7d24a04.ctex::
 Autumn_bush2.png::CompressedTexture2D::7147233502358478822::1779055063::1779055073::1::::<><><>0<>0<>8321ae536656c5c9d4b411fe37c09cf2<>res://.godot/imported/Autumn_bush2.png-9042cf8c5477cc6aca2f4d40ea78ba57.ctex::
 Autumn_bush3.png::CompressedTexture2D::2742882360042741613::1779055063::1779055073::1::::<><><>0<>0<>3c64daaeea01ac911322306bf636db4d<>res://.godot/imported/Autumn_bush3.png-17bd988d08ca4a9ff835c7fc094f814d.ctex::
@@ -199,6 +200,7 @@ Cactus1_3.png::CompressedTexture2D::5482820393730406247::1779055063::1779055073:
 Cactus2_1.png::CompressedTexture2D::4440419227079577569::1779055063::1779055073::1::::<><><>0<>0<>b42c24abae3dcf467600a66dc373ec33<>res://.godot/imported/Cactus2_1.png-ed705e6bd59078129962aed826da80bb.ctex::
 Cactus2_2.png::CompressedTexture2D::1786274074942750841::1779055064::1779055073::1::::<><><>0<>0<>31f843779c0befe86c4ce62b50f7b6e0<>res://.godot/imported/Cactus2_2.png-2ae8421d307fda78af3bf9d4713011f1.ctex::
 Cactus2_3.png::CompressedTexture2D::6118690581100223715::1779055064::1779055073::1::::<><><>0<>0<>fdc9be337e2a03e257d85109fa1fee35<>res://.godot/imported/Cactus2_3.png-1eef3b9111e8cb618bfded2f35aa885c.ctex::
+Dinosaur_skeleton_full_dark_shadow.png::CompressedTexture2D::1690608653990426290::1779327430::1779327360::1::::<><><>0<>0<>982add21f60a1f8d8480ab0ec6415d1a<>res://.godot/imported/Dinosaur_skeleton_full_dark_shadow.png-df7ee84f4e8348c2c31c4a71560fa6d8.ctex::
 Fern1_1.png::CompressedTexture2D::5760787885934443323::1779055064::1779055073::1::::<><><>0<>0<>aef15b5f21c12f2b53f8109ad0fd7b94<>res://.godot/imported/Fern1_1.png-9439484dadf9706ea8f876f447ead9e9.ctex::
 Fern1_2.png::CompressedTexture2D::6460494970217171871::1779055064::1779055073::1::::<><><>0<>0<>499f33edd87b561bcf52644cd191b32f<>res://.godot/imported/Fern1_2.png-48bef1a4177e24bb53460668d6588cd6.ctex::
 Fern1_3.png::CompressedTexture2D::990193438331996711::1779055064::1779055073::1::::<><><>0<>0<>90bb574f23fab91a6d27481a12f939c4<>res://.godot/imported/Fern1_3.png-ca2beb606b57d4f3e076ee97277ff971.ctex::
