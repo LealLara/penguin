@@ -1,9 +1,9 @@
-AnimatedSprite2D
+Parallax2D
 Sprite2D
 ParallaxLayer
 ParallaxBackground
+AnimatedSprite2D
 TileMapLayer
-Parallax2D
 Node2D
 Camera2D
 StaticBody2D
