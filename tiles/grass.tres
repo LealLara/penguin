@@ -4,6 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://bv53aedie6xuu" path="res://sprites/autumn forest/Terrain (16 x 16).png" id="2_3ieff"]
 [ext_resource type="Texture2D" uid="uid://bgtlxsvdqn65" path="res://sprites/tropics/Terrain (16 x 16).png" id="3_1vasb"]
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_1vasb"]
+tile_data = PackedInt32Array(0, 983042, 3, 65538, 589828, 3, 65539, 655364, 3, 65540, 655364, 3, 65541, 655364, 3, 65542, 786436, 3, 65543, 786436, 3, 65544, 786436, 3, 65545, 786436, 3, 65546, 786436, 3, 65547, 851972, 3, 14, 983042, 3)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_o2ud6"]
+tile_data = PackedInt32Array(0, 589827, 3, 1, 655363, 3, 2, 786435, 3, 3, 851971, 3)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 resource_name = "Grass"
 texture = ExtResource("1_o4tf5")
@@ -82,6 +88,7 @@ texture = ExtResource("2_3ieff")
 5:1/0 = 0
 5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -0.9575672, -8, -0.60936165)
 11:1/0 = 0
+11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -0.43525696, -8, -0.60936165)
 3:2/0 = 0
 4:2/0 = 0
 5:2/0 = 0
@@ -101,11 +108,17 @@ texture = ExtResource("2_3ieff")
 7:3/0 = 0
 7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -0.43525696, -8, -0.60936165)
 10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -0.43525696, -8, -0.60936165)
 11:3/0 = 0
 12:3/0 = 0
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -0.43525696, -8, -0.60936165)
 13:3/0 = 0
+13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -0.43525696, -8, -0.60936165)
 15:3/0 = 0
+15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -1.6539803, -8, -1.4798775)
+15:3/0/physics_layer_0/polygon_0/one_way = true
 1:4/0 = 0
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:4/0 = 0
@@ -215,3 +228,5 @@ physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_lnu2h")
 sources/3 = SubResource("TileSetAtlasSource_1vasb")
 sources/4 = SubResource("TileSetAtlasSource_o2ud6")
+pattern_0 = SubResource("TileMapPattern_1vasb")
+pattern_1 = SubResource("TileMapPattern_o2ud6")
