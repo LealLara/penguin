@@ -7,6 +7,9 @@
 [sub_resource type="TileMapPattern" id="TileMapPattern_1vasb"]
 tile_data = PackedInt32Array(0, 983042, 3, 65538, 589828, 3, 65539, 655364, 3, 65540, 655364, 3, 65541, 655364, 3, 65542, 786436, 3, 65543, 786436, 3, 65544, 786436, 3, 65545, 786436, 3, 65546, 786436, 3, 65547, 851972, 3, 14, 983042, 3)
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_o2ud6"]
+tile_data = PackedInt32Array(0, 589827, 3, 1, 655363, 3, 2, 786435, 3, 3, 851971, 3)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 resource_name = "Grass"
 texture = ExtResource("1_o4tf5")
@@ -226,3 +229,4 @@ sources/2 = SubResource("TileSetAtlasSource_lnu2h")
 sources/3 = SubResource("TileSetAtlasSource_1vasb")
 sources/4 = SubResource("TileSetAtlasSource_o2ud6")
 pattern_0 = SubResource("TileMapPattern_1vasb")
+pattern_1 = SubResource("TileMapPattern_o2ud6")
