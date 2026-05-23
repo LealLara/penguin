@@ -31,13 +31,16 @@ region_filter_clip_enabled = true
 
 [node name="flying-clouds" type="Parallax2D" parent="background" unique_id=1884949710]
 texture_repeat = 2
-scroll_scale = Vector2(1.2, 1.2)
-repeat_size = Vector2(576, 0)
-autoscroll = Vector2(-2, 0)
+scroll_scale = Vector2(1.1, 1.1)
+scroll_offset = Vector2(0, -1)
+repeat_size = Vector2(576, 90)
+autoscroll = Vector2(-1, 0)
+repeat_times = 3
 limit_begin = Vector2(0, -10000000)
 
 [node name="nuvole-volante" type="Sprite2D" parent="background/flying-clouds" unique_id=2120487268]
 texture_repeat = 2
+position = Vector2(-3, 0)
 texture = ExtResource("5_yk7xu")
 centered = false
 region_enabled = true
@@ -45,7 +48,8 @@ region_rect = Rect2(0, 0, 576, 208)
 
 [node name="static-clouds" type="Parallax2D" parent="background" unique_id=750013750]
 texture_repeat = 2
-scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(576, 0)
+autoscroll = Vector2(-2, 0)
 limit_begin = Vector2(0, -10000000)
 
 [node name="nuvole-estatiche" type="Sprite2D" parent="background/static-clouds" unique_id=600852118]
