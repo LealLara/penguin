@@ -191,9 +191,3 @@ z_index = 1
 sprite_frames = SubResource("SpriteFrames_i623q")
 animation = &"walk"
 autoplay = "goblin-idle"
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1891075427]
-limit_left = 0
-limit_bottom = 208
-position_smoothing_enabled = true
-position_smoothing_speed = 2.0

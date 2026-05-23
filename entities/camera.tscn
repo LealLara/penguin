@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c3shisuxbba0q"]
+
+[node name="Camera" type="Camera2D" unique_id=1128463936]
+limit_left = 0
+limit_bottom = 208
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
