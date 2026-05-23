@@ -1,3 +1,4 @@
-res://scenes/tropical.tscn
+res://entities/player.tscn
 res://tiles/grass.tres
 res://tiles/decoration.tres
+res://scenes/tropical.tscn
