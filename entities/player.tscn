@@ -178,7 +178,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="pinguino" type="CharacterBody2D" unique_id=1612425544]
+[node name="pinguino" type="CharacterBody2D" unique_id=1612425544 groups=["player"]]
 z_index = 2
 script = ExtResource("1_merdl")
 
