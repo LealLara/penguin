@@ -9,13 +9,13 @@
 
 [node name="Tropical" type="Node2D" unique_id=893553404]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1309391883]
+[node name="background" type="Node2D" parent="." unique_id=1309391883]
 
-[node name="background" type="Parallax2D" parent="Node2D" unique_id=853603075]
+[node name="cielo" type="Parallax2D" parent="background" unique_id=853603075]
 texture_repeat = 2
 scroll_scale = Vector2(0, 0)
 
-[node name="cielo" type="Sprite2D" parent="Node2D/background" unique_id=1015128368]
+[node name="blue" type="Sprite2D" parent="background/cielo" unique_id=1015128368]
 texture_repeat = 2
 scale = Vector2(2.0833333, 1)
 texture = ExtResource("4_kqnwl")
@@ -24,12 +24,12 @@ region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
 region_filter_clip_enabled = true
 
-[node name="nuvole-volante" type="Parallax2D" parent="Node2D" unique_id=696766047]
+[node name="nuvole-volante" type="Parallax2D" parent="background" unique_id=696766047]
 scroll_scale = Vector2(1.5, 1.5)
 scroll_offset = Vector2(2, 0)
 limit_begin = Vector2(0, 0)
 
-[node name="clouds" type="Sprite2D" parent="Node2D/nuvole-volante" unique_id=1171461584]
+[node name="clouds" type="Sprite2D" parent="background/nuvole-volante" unique_id=1171461584]
 texture_repeat = 2
 scale = Vector2(2, 1)
 texture = ExtResource("5_yk7xu")
@@ -37,12 +37,12 @@ centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
 
-[node name="nuvole estatiche" type="Parallax2D" parent="Node2D" unique_id=399111878]
+[node name="nuvole estatiche" type="Parallax2D" parent="background" unique_id=399111878]
 scroll_scale = Vector2(1.5, 1.5)
 scroll_offset = Vector2(2, 0)
 limit_begin = Vector2(0, 0)
 
-[node name="clouds" type="Sprite2D" parent="Node2D/nuvole estatiche" unique_id=389031765]
+[node name="clouds" type="Sprite2D" parent="background/nuvole estatiche" unique_id=389031765]
 texture_repeat = 2
 scale = Vector2(2, 1)
 texture = ExtResource("6_jdtx0")
