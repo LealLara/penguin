@@ -1,16 +1,16 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779537760
+::res://::1779541938
 icon.svg::CompressedTexture2D::2656019919714988769::1778935295::1778935301::1::::<><><>0<>0<>81144df665c89c59affe1a0660a2960a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1778954150::0::1::::<><><>0<>0<><>::
-::res://entities/::1779537823
+::res://entities/::1779540201
 plant.tscn::PackedScene::4781347136007797304::1778962403::0::1::::<><><>0<>0<><>::uid://bx5u762ej1phn::::res://sprites/grassland/Extra_plants (16 x 16).png
 player.gd::GDScript::4423391645166639995::1778967422::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::2498129936726336618::1779537823::0::1::::<><><>0<>0<><>::uid://b4ayu461n8v3x::::res://entities/player.gd<>uid://xk0nt7o1aphx::::res://sprites/penguin/Idle (16 x 16).png<>uid://e6yw4o5fsjg::::res://sprites/penguin/Waddling (16 x 16).png<>uid://baxcmwaxa784k::::res://sprites/penguin/Jump (16 x 16).png
+player.tscn::PackedScene::2498129936726336618::1779540201::0::1::::<><><>0<>0<><>::uid://b4ayu461n8v3x::::res://entities/player.gd<>uid://clhphit7n2lxg::::res://sprites/goblin/D_Idle.png<>uid://xk0nt7o1aphx::::res://sprites/penguin/Idle (16 x 16).png<>uid://e6yw4o5fsjg::::res://sprites/penguin/Waddling (16 x 16).png<>uid://baxcmwaxa784k::::res://sprites/penguin/Jump (16 x 16).png<>uid://d1uinlpreytbx::::res://sprites/goblin/D_Run.png<>uid://dq46i5wim3l41::::res://sprites/goblin/U_Run.png
 rock.tscn::PackedScene::973808785677176765::1778962383::0::1::::<><><>0<>0<><>::uid://bpop5cleg0y4b::::res://sprites/tiles/Rock_shape (16 x 16).png
-::res://scenes/::1779538060
+::res://scenes/::1779540324
 forest.tscn::PackedScene::4654839604768240352::1779022073::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://yhj03pep81u5::::res://sprites/autumn forest/Background parts/6 - Distant_trees.png<>uid://0m10rvj4de0d::::res://sprites/autumn forest/Background parts/5 - Tree_row_BG_2.png<>uid://by0wkk4m48wtq::::res://sprites/autumn forest/Background parts/4 - Tree_row_BG_1.png<>uid://sb622wcxnde7::::res://sprites/autumn forest/Background parts/3 - Bottom_leaf_piles.png<>uid://bo7qbq3xgsopn::::res://sprites/autumn forest/Background parts/2 - Trees.png<>uid://cptqxnfc1fsvd::::res://sprites/autumn forest/Background parts/1 - Leaf_top.png
 game.tscn::PackedScene::2554234286320288132::1779411517::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://bwo55gy7t3vrd::::res://tiles/decoration.tres<>uid://d3wqeilxhkojy::::res://sprites/tropics/Background parts/5 - Sky_color.png<>uid://c4hdpw8i18tqr::::res://sprites/tropics/Background parts/3 - Background_clouds.png<>uid://dsn3feldp7etg::::res://sprites/tropics/Background parts/4 - Floating_clouds.png
-tropical.tscn::PackedScene::1149975879894882267::1779538060::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://bwo55gy7t3vrd::::res://tiles/decoration.tres<>uid://d3wqeilxhkojy::::res://sprites/tropics/Background parts/5 - Sky_color.png<>uid://dsn3feldp7etg::::res://sprites/tropics/Background parts/4 - Floating_clouds.png<>uid://c4hdpw8i18tqr::::res://sprites/tropics/Background parts/3 - Background_clouds.png
+tropical.tscn::PackedScene::1149975879894882267::1779540324::0::1::::<><><>0<>0<><>::uid://bbud3nl33jgw5::::res://entities/player.tscn<>uid://bjc1rdrx0xogj::::res://tiles/grass.tres<>uid://bwo55gy7t3vrd::::res://tiles/decoration.tres<>uid://d3wqeilxhkojy::::res://sprites/tropics/Background parts/5 - Sky_color.png<>uid://dsn3feldp7etg::::res://sprites/tropics/Background parts/4 - Floating_clouds.png<>uid://c4hdpw8i18tqr::::res://sprites/tropics/Background parts/3 - Background_clouds.png
 ::res://scripts/::1778936184
 ::res://sprites/::1779539906
 ::res://sprites/autumn forest/::1778956947
@@ -27,7 +27,7 @@ _Complete_static_BG_(288 x 208).png::CompressedTexture2D::7573620623054759776::1
 ::res://sprites/food/::1779294034
 Food.png::CompressedTexture2D::1861049080284227918::1779281512::1779281512::1::::<><><>0<>0<>d1ed86b513ba0bc924f7f7f5336d0d34<>res://.godot/imported/Food.png-ed13ba40bda79f4a7a6f3be6a5f2077c.ctex::
 Supplies.png::CompressedTexture2D::6401862401811151777::1779294033::1779294034::1::::<><><>0<>0<>19b2effec793f77af4c40390ae301efb<>res://.godot/imported/Supplies.png-41781b90ee3ebc15dcfd3c1fee20fdb9.ctex::
-::res://sprites/goblin/::1779539901
+::res://sprites/goblin/::1779539912
 D_Idle.png::CompressedTexture2D::5560292998142273704::1779326710::1779539912::1::::<><><>0<>0<>53baef9a26bb865610f8c0ca05081507<>res://.godot/imported/D_Idle.png-dbcd468218930c21126feb12f9227afb.ctex::
 D_Run.png::CompressedTexture2D::9025969093719866725::1779326710::1779539912::1::::<><><>0<>0<>520ed400b3a2660fab416dffa85de829<>res://.godot/imported/D_Run.png-c364c6556ff7da040c3c09f2b6c89567.ctex::
 Goblin.png::CompressedTexture2D::506411236126831422::1779326710::1779539912::1::::<><><>0<>0<>2568c1ec2476ffefc66da2ce51281d35<>res://.godot/imported/Goblin.png-865f4193882e9abbd8c4555ab253b3da.ctex::
