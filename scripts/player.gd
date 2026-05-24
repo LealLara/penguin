@@ -82,7 +82,7 @@ func walk_state():
 		go_to_idle_state()
 		return 
 		
-	if Input.is_action_just_pressed("jump"): 
+	if is_on_floor() && Input.is_action_just_pressed("jump"): 
 		go_to_jump_state()
 		return 
 
