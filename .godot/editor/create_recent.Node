@@ -1,7 +1,7 @@
 TileMapLayer
+Node2D
 ParallaxLayer
 Sprite2D
-Node2D
 Parallax2D
 Camera2D
 AnimatedSprite2D
