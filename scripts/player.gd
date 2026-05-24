@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 const SPEED = 70.0
 const JUMP_VELOCITY = -300.0
@@ -52,6 +53,14 @@ func go_to_jump_state():
 func go_to_duck_state():
 	status = PlayerState.duck
 	anim.play("duck")
+	collision_shape.shape.radius = 5
+	collision_shape.shape.height = 10
+	collision_shape.position.y = 3
+	
+func exit_from_duck_state(): 
+	collision_shape.shape.radius = 6
+	collision_shape.shape.height = 16
+	collision_shape.position.y = 0
 
 func idle_state():
 	move()
@@ -66,7 +75,7 @@ func idle_state():
 	if Input.is_action_pressed("duck"): 
 		go_to_duck_state()
 		return 
-	 
+
 func walk_state():
 	move()
 	if velocity.x == 0:
@@ -76,19 +85,24 @@ func walk_state():
 	if Input.is_action_just_pressed("jump"): 
 		go_to_jump_state()
 		return 
-	 
+
 func jump_state():
 	move()
 	if is_on_floor():
 		go_to_idle_state()
 		return 
-		
-func duck_state():
+
+func duck_state(): 
 	update_direction()
-	if Input.is_action_just_released("duck"):
-		go_to_idle_state()
-		return
-	 
+	if Input.is_action_pressed("duck"):
+		exit_from_duck_state()
+		return 
+	else:
+		exit_from_duck_state() 
+	go_to_idle_state()
+	return 
+	
+
 func move():
 	update_direction()
 	
@@ -99,21 +113,14 @@ func move():
 	
 func update_direction():
 	direction = Input.get_axis("left", "right")
-	if is_on_floor():
-		if direction > 0:
-			anim.flip_h = false
-			anim.play("walk")
-		elif direction < 0:
-			anim.flip_h = true
-			anim.play("walk")
-		else:
-			anim.play("idle")
-	else:
-		if direction > 0:
-			anim.flip_h = false
-			anim.play("jump")
-		elif direction < 0:
-			anim.flip_h = true
-			anim.play("jump")
+
+	if direction > 0:
+		anim.flip_h = false 
+	elif direction < 0:
+			anim.flip_h = true  
 			
+
+	if status == PlayerState.duck:
+		return 
 	
+	 
