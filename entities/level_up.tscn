@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cf6xechdihgrd"]
+
+[ext_resource type="Script" uid="uid://cmboq6i33x4ig" path="res://scripts/level_up.gd" id="1_xguij"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8om15"]
+
+[node name="levelUp" type="Area2D" unique_id=1121360858]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_xguij")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1405238451]
+shape = SubResource("RectangleShape2D_8om15")
+debug_color = Color(0.51432097, 0.5756136, 0.10161943, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
