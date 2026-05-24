@@ -2,12 +2,17 @@
 
 [ext_resource type="Script" uid="uid://dsvwg3wqpy8sn" path="res://scripts/player.gd" id="1_merdl"]
 [ext_resource type="Texture2D" uid="uid://xk0nt7o1aphx" path="res://sprites/penguin/Idle (16 x 16).png" id="2_b0kkn"]
+[ext_resource type="Texture2D" uid="uid://dep4ymejh25o2" path="res://sprites/penguin/Ducking (16 x 16).png" id="2_qly61"]
 [ext_resource type="Texture2D" uid="uid://baxcmwaxa784k" path="res://sprites/penguin/Jump (16 x 16).png" id="3_rfe5m"]
 [ext_resource type="Texture2D" uid="uid://e6yw4o5fsjg" path="res://sprites/penguin/Waddling (16 x 16).png" id="4_qly61"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rfe5m"]
 radius = 7.0
 height = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rie4"]
+atlas = ExtResource("2_qly61")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qly61"]
 atlas = ExtResource("2_b0kkn")
@@ -59,6 +64,14 @@ region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8rie4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rie4")
+}],
+"loop": true,
+"name": &"duck",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qly61")
@@ -122,6 +135,4 @@ shape = SubResource("CapsuleShape2D_rfe5m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2111992789]
 sprite_frames = SubResource("SpriteFrames_8rie4")
-animation = &"idle"
-frame = 4
-frame_progress = 1.0
+animation = &"duck"
