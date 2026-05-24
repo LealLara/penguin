@@ -8,8 +8,11 @@ const JUMP_VELOCITY = -300.0
 enum PlayerState{
 	idle,
 	walk,
-	jump
+	jump,
+	duck
 }
+var direction = 0
+
 
 var status: PlayerState 
 
@@ -28,6 +31,8 @@ func _physics_process(delta: float) -> void:
 			walk_state()
 		PlayerState.jump:
 			jump_state()
+		PlayerState.duck:
+			duck_state()
 			
 	move_and_slide()
 
@@ -43,6 +48,10 @@ func go_to_jump_state():
 	status = PlayerState.jump
 	anim.play("jump")
 	velocity.y = JUMP_VELOCITY
+	
+func go_to_duck_state():
+	status = PlayerState.duck
+	anim.play("duck")
 
 func idle_state():
 	move()
@@ -52,6 +61,10 @@ func idle_state():
 		
 	if Input.is_action_just_pressed("jump"): 
 		go_to_jump_state()
+		return 
+		
+	if Input.is_action_pressed("duck"): 
+		go_to_duck_state()
 		return 
 	 
 func walk_state():
@@ -69,14 +82,23 @@ func jump_state():
 	if is_on_floor():
 		go_to_idle_state()
 		return 
-	
+		
+func duck_state():
+	update_direction()
+	if Input.is_action_just_released("duck"):
+		go_to_idle_state()
+		return
 	 
 func move():
-	var direction := Input.get_axis("left", "right")
+	update_direction()
+	
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+func update_direction():
+	direction = Input.get_axis("left", "right")
 	if is_on_floor():
 		if direction > 0:
 			anim.flip_h = false
@@ -93,26 +115,5 @@ func move():
 		elif direction < 0:
 			anim.flip_h = true
 			anim.play("jump")
-
- 
-func temp(delta: float) -> void:
-	  
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-
-	  
-	move_and_slide()
+			
+	
