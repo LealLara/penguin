@@ -1,5 +1,12 @@
-res://scenes/forest.tscn
 res://tiles/grass.tres
 res://tiles/decoration.tres
+res://entities/player.tscn
+res://scripts/player.gd
 res://scenes/home.tscn
+res://scenes/forest.tscn
 res://scenes/tropicalia.tscn
+res://scripts/camera.gd
+res://scripts/level_up.gd
+res://entities/level_up.tscn
+res://entities/level_forest.tscn
+res://scripts/level_forest.gd
