@@ -10,6 +10,7 @@ enum PlayerState{
 	idle,
 	walk,
 	jump,
+	fall,
 	duck
 }
 var jump_count = 0
@@ -32,6 +33,8 @@ func _physics_process(delta: float) -> void:
 			walk_state()
 		PlayerState.jump:
 			jump_state()
+		PlayerState.fall:
+			fall_state()
 		PlayerState.duck:
 			duck_state()
 			
@@ -50,14 +53,18 @@ func go_to_jump_state():
 	anim.play("jump")
 	velocity.y = JUMP_VELOCITY
 	jump_count += 1 
-	
+
+func go_to_fall_state():
+	status = PlayerState.fall
+	anim.play("fall")
+
 func go_to_duck_state():
 	status = PlayerState.duck
 	anim.play("duck")
 	collision_shape.shape.radius = 5
 	collision_shape.shape.height = 8
 	collision_shape.position.y = 3
-	
+
 func exit_from_duck_state(): 
 	collision_shape.shape.radius = 6
 	collision_shape.shape.height = 14
@@ -96,7 +103,11 @@ func jump_state():
 	
 	if Input.is_action_just_pressed("jump") && jump_count < mas_jump_count:
 		go_to_jump_state()	
-	
+		return
+	if velocity.y > 0:
+		go_to_fall_state()
+
+func fall_state():
 	if is_on_floor() && velocity.x == 0:
 		jump_count = 0
 		go_to_idle_state()
@@ -104,6 +115,7 @@ func jump_state():
 		 
 	if direction > 0:
 		go_to_walk_state()
+		return 
 	elif direction < 0:
 		go_to_walk_state()
 		return 
@@ -111,6 +123,8 @@ func jump_state():
 	if Input.is_action_pressed("duck"): 
 		go_to_duck_state()
 		return 
+	
+
 
 func duck_state(): 
 	update_direction()
@@ -119,7 +133,6 @@ func duck_state():
 		return  
 	go_to_idle_state()
 	return 
-	
 
 func move():
 	update_direction()
@@ -128,7 +141,7 @@ func move():
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
+
 func update_direction():
 	direction = Input.get_axis("left", "right")
 
@@ -139,6 +152,4 @@ func update_direction():
 			
 
 	if status == PlayerState.duck:
-		return 
-	
-	 
+		return  
