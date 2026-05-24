@@ -78,6 +78,20 @@ jump={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="tiles"
+2d_physics/layer_2="player"
+2d_physics/layer_3="enemies"
+2d_physics/layer_4="levelUp"
+2d_physics/layer_5="levelForest"
+2d_physics/layer_6="health"
+2d_physics/layer_7="food"
+2d_physics/layer_8="wood"
+2d_physics/layer_9="potions"
+2d_physics/layer_10="meat"
+2d_physics/layer_11="coins"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
