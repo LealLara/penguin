@@ -1,9 +1,5 @@
-res://scenes/tropical.tscn
+res://scenes/forest.tscn
 res://tiles/grass.tres
 res://tiles/decoration.tres
-res://scenes/tropicalia.tscn
-res://entities/player.tscn
-res://scenes/forest.tscn
 res://scenes/home.tscn
-res://entities/camera.tscn
-res://scripts/camera.gd
+res://scenes/tropicalia.tscn
