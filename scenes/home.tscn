@@ -29,6 +29,7 @@ animations = [{
 [node name="Camera" parent="." unique_id=1128463936 instance=ExtResource("7_ip4d6")]
 
 [node name="pinguino" parent="." unique_id=1612425544 instance=ExtResource("1_mahjx")]
+position = Vector2(12, 11)
 
 [node name="background" type="Node2D" parent="." unique_id=443075239]
 
