@@ -54,12 +54,12 @@ func go_to_duck_state():
 	status = PlayerState.duck
 	anim.play("duck")
 	collision_shape.shape.radius = 5
-	collision_shape.shape.height = 10
+	collision_shape.shape.height = 8
 	collision_shape.position.y = 3
 	
 func exit_from_duck_state(): 
 	collision_shape.shape.radius = 6
-	collision_shape.shape.height = 16
+	collision_shape.shape.height = 14
 	collision_shape.position.y = 0
 
 func idle_state():
@@ -95,10 +95,8 @@ func jump_state():
 func duck_state(): 
 	update_direction()
 	if Input.is_action_pressed("duck"):
-		exit_from_duck_state()
-		return 
-	else:
-		exit_from_duck_state() 
+		go_to_duck_state()
+		return  
 	go_to_idle_state()
 	return 
 	
