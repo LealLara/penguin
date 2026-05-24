@@ -2,3 +2,4 @@ res://scripts/player.gd
 res://scenes/tropicalia.tscn
 res://tiles/grass.tres
 res://tiles/decoration.tres
+res://entities/player.tscn
