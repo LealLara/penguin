@@ -85,11 +85,29 @@ func walk_state():
 	if is_on_floor() && Input.is_action_just_pressed("jump"): 
 		go_to_jump_state()
 		return 
+		
+	if Input.is_action_pressed("duck"): 
+		go_to_duck_state()
+		return 
 
 func jump_state():
 	move()
-	if is_on_floor():
+	
+	if Input.is_action_just_pressed("jump"):
+		go_to_jump_state()	
+	
+	if is_on_floor() && velocity.x == 0:
 		go_to_idle_state()
+		return 
+		 
+	if direction > 0:
+		go_to_walk_state()
+	elif direction < 0:
+		go_to_walk_state()
+		return 
+		
+	if Input.is_action_pressed("duck"): 
+		go_to_duck_state()
 		return 
 
 func duck_state(): 
