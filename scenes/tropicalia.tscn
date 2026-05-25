@@ -124,7 +124,7 @@ debug_color = Color(0.547127, 0.56477964, 0.093797244, 0.41960785)
 
 [node name="player" parent="." unique_id=410979275 groups=["player"] instance=ExtResource("11_cdksp")]
 position = Vector2(6, 21)
-mas_jump_count = 8
+mas_jump_count = 3
 
 [node name="levelForest" parent="." unique_id=1766631452 instance=ExtResource("11_onqww")]
 position = Vector2(600, 168)
