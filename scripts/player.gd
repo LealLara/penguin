@@ -106,8 +106,15 @@ func jump_state():
 		return
 	if velocity.y > 0:
 		go_to_fall_state()
+		return
 
 func fall_state():
+	move()
+	
+	if Input.is_action_just_pressed("jump") && jump_count < mas_jump_count:
+		go_to_jump_state()	
+		return
+	
 	if is_on_floor() && velocity.x == 0:
 		jump_count = 0
 		go_to_idle_state()
