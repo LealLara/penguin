@@ -14,7 +14,7 @@ enum PlayerState{
 	duck
 }
 var jump_count = 0
-@export var mas_jump_count = 2
+@export var max_jump_count = 2
 var direction = 0
 var status: PlayerState 
 
@@ -96,12 +96,17 @@ func walk_state():
 		
 	if Input.is_action_pressed("duck"): 
 		go_to_duck_state()
-		return 
+		return
+		 
+	if !is_on_floor():
+		go_to_fall_state()
+		return
+
 
 func jump_state():
 	move()
 	
-	if Input.is_action_just_pressed("jump") && jump_count < mas_jump_count:
+	if Input.is_action_just_pressed("jump") && can_jump():
 		go_to_jump_state()	
 		return
 	if velocity.y > 0:
@@ -111,7 +116,7 @@ func jump_state():
 func fall_state():
 	move()
 	
-	if Input.is_action_just_pressed("jump") && jump_count < mas_jump_count:
+	if Input.is_action_just_pressed("jump") &&  can_jump():
 		go_to_jump_state()	
 		return
 	
@@ -131,7 +136,6 @@ func fall_state():
 		go_to_duck_state()
 		return 
 	
-
 
 func duck_state(): 
 	update_direction()
@@ -160,3 +164,6 @@ func update_direction():
 
 	if status == PlayerState.duck:
 		return  
+
+func can_jump() -> bool:
+	return jump_count < max_jump_count
