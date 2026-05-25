@@ -106,8 +106,6 @@ tile_set = ExtResource("3_vc333")
 
 [node name="levelUp" parent="." unique_id=1121360858 instance=ExtResource("10_hhep5")]
 position = Vector2(4686, 120)
-collision_layer = 8
-collision_mask = 2
 next_level = "tropicalia"
 
 [node name="CollisionShape2D" parent="levelUp" index="0" unique_id=1405238451]
@@ -116,5 +114,7 @@ shape = SubResource("RectangleShape2D_hhep5")
 
 [node name="player" parent="." unique_id=410979275 groups=["player"] instance=ExtResource("1_mahjx")]
 position = Vector2(12, 53)
+aceleration = 400
+deceleration = 400
 
 [editable path="levelUp"]

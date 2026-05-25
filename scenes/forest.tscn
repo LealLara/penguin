@@ -186,7 +186,7 @@ z_index = 2
 tile_map_data = PackedByteArray("AAAeAAcAAAAFAAUAAAAeAAgAAAAFAAUAAAAeAAkAAAAFAAUAAAAdAAkAAAADAAIAAAAdAAgAAAADAAIAAAAdAAcAAAADAAIAAAA=")
 tile_set = SubResource("TileSet_dabdc")
 
-[node name="decoration" type="TileMapLayer" parent="TyleMaps" unique_id=1247470062]
+[node name="TileMapLayer" type="TileMapLayer" parent="TyleMaps" unique_id=1247470062]
 tile_map_data = PackedByteArray("AAAYAAkACAARAAoAAAApAAsAAgADAAUAAAA=")
 tile_set = ExtResource("11_ercsu")
 
