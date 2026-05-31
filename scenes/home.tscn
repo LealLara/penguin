@@ -114,7 +114,5 @@ shape = SubResource("RectangleShape2D_hhep5")
 
 [node name="player" parent="." unique_id=410979275 groups=["player"] instance=ExtResource("1_mahjx")]
 position = Vector2(12, 53)
-aceleration = 400
-deceleration = 400
 
 [editable path="levelUp"]
