@@ -5,3 +5,5 @@ res://scripts/player.gd
 res://scenes/tropicalia.tscn
 res://scenes/forest.tscn
 res://scenes/home.tscn
+res://entities/skeleton.tscn
+res://scripts/skeleton.gd
