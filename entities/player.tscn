@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://873q8kypahqd" path="res://sprites/penguin/Falling (16 x 16).png" id="3_qsoyl"]
 [ext_resource type="Texture2D" uid="uid://baxcmwaxa784k" path="res://sprites/penguin/Jump (16 x 16).png" id="3_rfe5m"]
 [ext_resource type="Texture2D" uid="uid://e6yw4o5fsjg" path="res://sprites/penguin/Waddling (16 x 16).png" id="4_qly61"]
+[ext_resource type="Texture2D" uid="uid://cg6yo1ptgooot" path="res://sprites/penguin/Belly_Sliding (16 x 16).png" id="6_6nm46"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rfe5m"]
 radius = 7.0
@@ -42,6 +43,18 @@ region = Rect2(64, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjdhl"]
 atlas = ExtResource("3_rfe5m")
 region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgp7q"]
+atlas = ExtResource("6_6nm46")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n8aq"]
+atlas = ExtResource("6_6nm46")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28s6d"]
+atlas = ExtResource("6_6nm46")
+region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x08pd"]
 atlas = ExtResource("4_qly61")
@@ -115,6 +128,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_cgp7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n8aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28s6d")
+}],
+"loop": true,
+"name": &"slide",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_x08pd")
 }, {
 "duration": 1.0,
@@ -148,5 +175,6 @@ shape = SubResource("CapsuleShape2D_rfe5m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2111992789]
 sprite_frames = SubResource("SpriteFrames_8rie4")
-animation = &"idle"
-autoplay = "walk"
+animation = &"slide"
+autoplay = "slide"
+frame_progress = 0.47984147
