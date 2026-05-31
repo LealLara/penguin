@@ -9,7 +9,7 @@ extends CharacterBody2D
 
 const JUMP_VELOCITY = -300.0
  
-#const SPEED = 70.0
+const SPEED = 70.0
 var jump_count = 0
 @export var max_jump_count = 2
 
@@ -22,7 +22,8 @@ enum PlayerState{
 	jump,
 	fall,
 	duck,
-	slide
+	slide,
+	dead	
 }
 func _ready() -> void: 
 	go_to_idle_state()
@@ -45,7 +46,8 @@ func _physics_process(delta: float) -> void:
 			duck_state(delta)
 		PlayerState.slide:
 			slide_state(delta)
-					
+		PlayerState.dead:
+			dead_state(delta)
 	move_and_slide()
 
 func go_to_idle_state():
@@ -82,6 +84,11 @@ func go_to_slide_state():
 func exit_from_slide_state():
 	pass
 	set_large_collider()
+
+func go_to_dead_state():
+	status = PlayerState.dead
+	anim.play("dead")
+	velocity.x = 0
 
 func idle_state(delta):
 	move(delta)
@@ -121,7 +128,6 @@ func walk_state(delta):
 		go_to_fall_state()
 		return
 
-
 func jump_state(delta):
 	move(delta)
 	
@@ -158,7 +164,6 @@ func fall_state(delta):
 	if Input.is_action_pressed("duck"): 
 		go_to_duck_state()
 		return 
-	
 
 func duck_state(delta): 
 	update_direction()
@@ -181,6 +186,8 @@ func slide_state(delta):
 		go_to_duck_state()
 		return 
 
+func dead_state(delta):
+	pass
 
 func move(delta):
 	update_direction()
@@ -192,19 +199,19 @@ func move(delta):
 
 func update_direction():
 	direction = Input.get_axis("left", "right")
-
+	print(direction)
+	
 	if direction > 0:
 		anim.flip_h = false 
 	elif direction < 0:
 			anim.flip_h = true  
-			
-
+	
 	if status == PlayerState.duck:
 		return  
 
 func can_jump() -> bool:
 	return jump_count < max_jump_count
-	
+
 func set_small_collider():
 	collision_shape.shape.radius = 5
 	collision_shape.shape.height = 8
@@ -214,3 +221,11 @@ func set_large_collider():
 	collision_shape.shape.radius = 6
 	collision_shape.shape.height = 14
 	collision_shape.position.y = 0
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if velocity.y > 0:
+		area.get_parent().take_damage()  
+		go_to_jump_state()
+	else:
+		go_to_dead_state()

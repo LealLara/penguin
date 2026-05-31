@@ -12,6 +12,7 @@
 [ext_resource type="TileSet" uid="uid://bwo55gy7t3vrd" path="res://tiles/decoration.tres" id="11_ercsu"]
 [ext_resource type="PackedScene" uid="uid://bbud3nl33jgw5" path="res://entities/player.tscn" id="12_dabdc"]
 [ext_resource type="PackedScene" uid="uid://cf6xechdihgrd" path="res://entities/level_up.tscn" id="12_j3csf"]
+[ext_resource type="PackedScene" uid="uid://bg1iog234winf" path="res://entities/skeleton.tscn" id="13_dabdc"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ercsu"]
 tile_data = PackedInt32Array(0, 196611, 5, 65536, 196611, 5, 131072, 196611, 5, 1, 262147, 5, 65537, 262147, 5, 131073, 262147, 5, 2, 327683, 5, 65538, 327683, 5, 131074, 327683, 5)
@@ -200,5 +201,8 @@ shape = SubResource("RectangleShape2D_j3csf")
 
 [node name="player" parent="." unique_id=410979275 groups=["player"] instance=ExtResource("12_dabdc")]
 position = Vector2(22, 141)
+
+[node name="Skeleton" parent="." unique_id=1708730189 instance=ExtResource("13_dabdc")]
+position = Vector2(167, 135)
 
 [editable path="levelUp"]

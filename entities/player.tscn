@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dsvwg3wqpy8sn" path="res://scripts/player.gd" id="1_merdl"]
 [ext_resource type="Texture2D" uid="uid://xk0nt7o1aphx" path="res://sprites/penguin/Idle (16 x 16).png" id="2_b0kkn"]
+[ext_resource type="Texture2D" uid="uid://c62ycinvagaxi" path="res://sprites/penguin/Hurt (16 x 16).png" id="2_ef06p"]
 [ext_resource type="Texture2D" uid="uid://dep4ymejh25o2" path="res://sprites/penguin/Ducking (16 x 16).png" id="2_qly61"]
 [ext_resource type="Texture2D" uid="uid://873q8kypahqd" path="res://sprites/penguin/Falling (16 x 16).png" id="3_qsoyl"]
 [ext_resource type="Texture2D" uid="uid://baxcmwaxa784k" path="res://sprites/penguin/Jump (16 x 16).png" id="3_rfe5m"]
+[ext_resource type="Texture2D" uid="uid://dbrpwvu5hqsqk" path="res://sprites/penguin/Lying_On_Ground (16 x 16).png" id="3_tjdhl"]
 [ext_resource type="Texture2D" uid="uid://e6yw4o5fsjg" path="res://sprites/penguin/Waddling (16 x 16).png" id="4_qly61"]
 [ext_resource type="Texture2D" uid="uid://cg6yo1ptgooot" path="res://sprites/penguin/Belly_Sliding (16 x 16).png" id="6_6nm46"]
 
@@ -82,6 +84,17 @@ region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8rie4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ef06p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tjdhl")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 2.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8rie4")
@@ -164,6 +177,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x08pd"]
+size = Vector2(14, 15)
+
 [node name="player" type="CharacterBody2D" unique_id=410979275]
 z_index = 1
 collision_layer = 2
@@ -175,6 +191,14 @@ shape = SubResource("CapsuleShape2D_rfe5m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2111992789]
 sprite_frames = SubResource("SpriteFrames_8rie4")
-animation = &"slide"
-autoplay = "slide"
-frame_progress = 0.47984147
+animation = &"idle"
+autoplay = "dead"
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=425096486]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=302557831]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_x08pd")
+debug_color = Color(0.8990572, 0.27340892, 0.4054005, 0.41960785)
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
