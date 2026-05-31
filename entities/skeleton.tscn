@@ -18,7 +18,11 @@ animations = [{
 radius = 6.0
 height = 26.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yag7t"]
+size = Vector2(10, 26)
+
 [node name="Skeleton" type="CharacterBody2D" unique_id=906296337]
+collision_layer = 4
 script = ExtResource("1_yag7t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1559004120]
@@ -27,3 +31,10 @@ sprite_frames = SubResource("SpriteFrames_yag7t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=746986493]
 position = Vector2(2, 3)
 shape = SubResource("CapsuleShape2D_fpmxe")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1530537302]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1449496770]
+position = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_yag7t")
+debug_color = Color(0.8618896, 0.3048453, 0.50344706, 0.41960785)
