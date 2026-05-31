@@ -3,24 +3,27 @@ extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @export var  max_speed = 180.0
-@export var  aceleration = 100
-@export var  deceleration = 100
-const SPEED = 70.0
+@export var  aceleration = 400
+@export var  deceleration = 400
+@export var  slide_deceleration = 100
+
 const JUMP_VELOCITY = -300.0
  
-enum PlayerState{
-	idle,
-	walk,
-	jump,
-	fall,
-	duck
-}
+#const SPEED = 70.0
 var jump_count = 0
 @export var max_jump_count = 2
 
 var direction = 0
 var status: PlayerState 
 
+enum PlayerState{
+	idle,
+	walk,
+	jump,
+	fall,
+	duck,
+	slide
+}
 func _ready() -> void: 
 	go_to_idle_state()
 
@@ -40,7 +43,9 @@ func _physics_process(delta: float) -> void:
 			fall_state(delta)
 		PlayerState.duck:
 			duck_state(delta)
-			
+		PlayerState.slide:
+			slide_state(delta)
+					
 	move_and_slide()
 
 func go_to_idle_state():
@@ -64,14 +69,19 @@ func go_to_fall_state():
 func go_to_duck_state():
 	status = PlayerState.duck
 	anim.play("duck")
-	collision_shape.shape.radius = 5
-	collision_shape.shape.height = 8
-	collision_shape.position.y = 3
-
+	set_small_collider()
+	
 func exit_from_duck_state(): 
-	collision_shape.shape.radius = 6
-	collision_shape.shape.height = 14
-	collision_shape.position.y = 0
+	set_large_collider()
+
+func go_to_slide_state():
+	status = PlayerState.slide
+	anim.play("slide")
+	set_small_collider()
+	
+func exit_from_slide_state():
+	pass
+	set_large_collider()
 
 func idle_state(delta):
 	move(delta)
@@ -84,22 +94,27 @@ func idle_state(delta):
 		return 
 		
 	if Input.is_action_pressed("duck"): 
-		go_to_duck_state()
+		go_to_slide_state()
 		return 
 
 func walk_state(delta):
 	move(delta)
+	
 	if velocity.x == 0:
 		go_to_idle_state()
 		return 
 		
+	if Input.is_action_just_pressed("duck"): 
+		go_to_slide_state()
+		return
+	
 	if is_on_floor() && Input.is_action_just_pressed("jump"): 
 		go_to_jump_state()
 		return 
 		
-	if Input.is_action_pressed("duck"): 
-		go_to_duck_state()
-		return
+		
+	#if Input.is_action_pressed("duck"): 
+	#	go_to_duck_state()
 		 
 	if !is_on_floor():
 		jump_count += 1
@@ -113,9 +128,13 @@ func jump_state(delta):
 	if Input.is_action_just_pressed("jump") && can_jump():
 		go_to_jump_state()	
 		return
+		
 	if velocity.y > 0:
 		go_to_fall_state()
 		return
+		
+	if Input.is_action_just_pressed("duck"): 
+		velocity.x = 0 
 
 func fall_state(delta):
 	move(delta)
@@ -149,6 +168,19 @@ func duck_state(delta):
 	go_to_idle_state()
 	return 
 
+func slide_state(delta):
+	velocity.x = move_toward(velocity.x, 0, slide_deceleration * delta)
+	
+	if Input.is_action_just_released("duck"): 
+		exit_from_slide_state()
+		go_to_walk_state()
+		return
+		
+	if velocity.x == 0:
+		exit_from_slide_state()
+		go_to_duck_state()
+		return 
+
 
 func move(delta):
 	update_direction()
@@ -172,3 +204,13 @@ func update_direction():
 
 func can_jump() -> bool:
 	return jump_count < max_jump_count
+	
+func set_small_collider():
+	collision_shape.shape.radius = 5
+	collision_shape.shape.height = 8
+	collision_shape.position.y = 3
+
+func set_large_collider():
+	collision_shape.shape.radius = 6
+	collision_shape.shape.height = 14
+	collision_shape.position.y = 0
