@@ -82,7 +82,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"dead",
-"speed": 10.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -120,12 +120,12 @@ script = ExtResource("1_yag7t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=981587657]
 sprite_frames = SubResource("SpriteFrames_yag7t")
-animation = &"walk"
+animation = &"dead"
 autoplay = "walk"
-frame_progress = 0.9680877
+frame = 6
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=491117583]
-visible = false
 position = Vector2(2, 3)
 shape = SubResource("CapsuleShape2D_fpmxe")
 
