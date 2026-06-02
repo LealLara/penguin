@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgl2cguckliaa" path="res://sprites/tropics/Background parts/1 - Waters_version_1.png" id="5_6uml4"]
 [ext_resource type="Texture2D" uid="uid://ctstp3b73pc7a" path="res://sprites/tropics/Background parts/2 - Waters_version_2.png" id="6_17qnm"]
 [ext_resource type="TileSet" uid="uid://bjc1rdrx0xogj" path="res://tiles/grass.tres" id="7_vypen"]
-[ext_resource type="PackedScene" uid="uid://dhjwaij7t6w26" path="res://entities/skeleton.tscn" id="8_cdksp"]
+[ext_resource type="PackedScene" uid="uid://bg1iog234winf" path="res://entities/skeleton.tscn" id="8_cdksp"]
 [ext_resource type="TileSet" uid="uid://bwo55gy7t3vrd" path="res://tiles/decoration.tres" id="8_jas1l"]
 [ext_resource type="PackedScene" uid="uid://c3shisuxbba0q" path="res://entities/camera.tscn" id="9_65baw"]
 [ext_resource type="PackedScene" uid="uid://cf6xechdihgrd" path="res://entities/level_up.tscn" id="10_6ffp5"]
@@ -30,10 +30,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onqww"]
-size = Vector2(18, 100)
+size = Vector2(10, 197)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdksp"]
 size = Vector2(14, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6uml4"]
+size = Vector2(4262, 15)
 
 [node name="Tropicalia" type="Node2D" unique_id=893553404]
 script = SubResource("GDScript_qufgo")
@@ -115,12 +118,12 @@ tile_set = ExtResource("8_jas1l")
 [node name="Skeleton" parent="TyleMaps" unique_id=906296337 instance=ExtResource("8_cdksp")]
 position = Vector2(407, 112)
 
-[node name="levelUp" parent="." unique_id=1121360858 instance=ExtResource("10_6ffp5")]
+[node name="levelHome" parent="." unique_id=1121360858 instance=ExtResource("10_6ffp5")]
 position = Vector2(412, 117)
 next_level = "home"
 
-[node name="CollisionShape2D" parent="levelUp" index="0" unique_id=1405238451]
-position = Vector2(3605, 23)
+[node name="CollisionShape2D" parent="levelHome" index="0" unique_id=1405238451]
+position = Vector2(3855, -18.5)
 shape = SubResource("RectangleShape2D_onqww")
 debug_color = Color(0.547127, 0.56477964, 0.093797244, 0.41960785)
 
@@ -136,5 +139,15 @@ position = Vector2(600, 168)
 position = Vector2(3, 5.5)
 shape = SubResource("RectangleShape2D_cdksp")
 
-[editable path="levelUp"]
+[node name="levelHome2" parent="." unique_id=1549982915 instance=ExtResource("10_6ffp5")]
+position = Vector2(824, 234)
+next_level = "home"
+
+[node name="CollisionShape2D" parent="levelHome2" index="0" unique_id=1405238451]
+position = Vector2(1311, -31.5)
+shape = SubResource("RectangleShape2D_6uml4")
+debug_color = Color(0.547127, 0.56477964, 0.093797244, 0.41960785)
+
+[editable path="levelHome"]
 [editable path="levelForest"]
+[editable path="levelHome2"]

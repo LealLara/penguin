@@ -4,7 +4,7 @@ enum SkeletonState{
 	walk,
 	dead
 }
-@onready var colli : CollisionShape2D = $CollisionShape2D
+@onready var colli : CollisionShape2D = $CollisionShape2D 
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox: Area2D = $Hitbox
@@ -37,7 +37,7 @@ func go_to_dead_state():
 	status = SkeletonState.dead
 	anim.play("dead")
 	hitbox.process_mode = Node.PROCESS_MODE_DISABLED
-	colli.process_mode = Node.PROCESS_MODE_DISABLED
+	colli.process_mode = Node.PROCESS_MODE_DISABLED 
 
 func walk_state(_delta):
 	pass
@@ -46,5 +46,5 @@ func dead_state(_delta):
 	pass
 	
 func take_damage():
-	go_to_dead_state()
-	 
+	go_to_dead_state() 
+ 
