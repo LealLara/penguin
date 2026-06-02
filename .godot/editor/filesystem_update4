@@ -1,9 +1,6 @@
-res://entities/player.tscn
+res://entities/skeleton.tscn
 res://tiles/grass.tres
 res://tiles/decoration.tres
-res://scripts/player.gd
-res://scenes/tropicalia.tscn
-res://scenes/forest.tscn
-res://scenes/home.tscn
-res://entities/skeleton.tscn
 res://scripts/skeleton.gd
+res://scenes/tropicalia.tscn
+res://scenes/home.tscn
