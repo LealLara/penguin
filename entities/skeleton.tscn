@@ -113,27 +113,33 @@ radius = 7.0
 height = 26.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4oc3b"]
-size = Vector2(12, 24.5)
+size = Vector2(15, 26)
 
 [node name="Skeleton" type="CharacterBody2D" unique_id=1708730189]
+z_index = 1
 script = ExtResource("1_yag7t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=981587657]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_yag7t")
 animation = &"hurt"
 autoplay = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=491117583]
-position = Vector2(2, 3)
+z_index = 1
+position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_fpmxe")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1464295789]
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1300676586]
-position = Vector2(2, 3)
+z_index = 1
+position = Vector2(0.5, 3)
 shape = SubResource("RectangleShape2D_4oc3b")
 debug_color = Color(0.9005111, 0.22424716, 0.55056745, 0.41960785)
 
 [node name="WallDetector" type="RayCast2D" parent="." unique_id=1366930554]
+z_index = -1
 position = Vector2(0, 14)
-target_position = Vector2(25, 0)
+target_position = Vector2(16, 0)

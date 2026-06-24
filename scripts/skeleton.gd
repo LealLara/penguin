@@ -11,7 +11,7 @@ enum SkeletonState{
 @onready var wall_detector: RayCast2D = $WallDetector
 
  
-const SPEED = 10.0
+const SPEED = 5.0
 const JUMP_VELOCITY = -400.0
 var direction = 1
 var status: SkeletonState
@@ -40,7 +40,6 @@ func go_to_hurt_state():
 	anim.play("hurt") 
 	hitbox.process_mode = Node.PROCESS_MODE_DISABLED
 	
-
 func walk_state(_delta):
 	velocity.x = SPEED * direction
 	
