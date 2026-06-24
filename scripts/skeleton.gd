@@ -9,9 +9,10 @@ enum SkeletonState{
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox: Area2D = $Hitbox
 @onready var wall_detector: RayCast2D = $WallDetector
+@onready var ground_detector: RayCast2D = $GroundDetector
 
  
-const SPEED = 5.0
+const SPEED = 10.0
 const JUMP_VELOCITY = -400.0
 var direction = 1
 var status: SkeletonState
@@ -38,12 +39,25 @@ func go_to_walk_state():
 func go_to_hurt_state():
 	status = SkeletonState.hurt
 	anim.play("hurt") 
-	hitbox.process_mode = Node.PROCESS_MODE_DISABLED
+	hitbox.process_mode = Node.PROCESS_MODE_DISABLED 
+	hitbox.monitoring = false
+	#colli.set_deferred("disabled", true)
+	#var hitbox_shape = hitbox.get_node("CollisionShape2D")
+	#hitbox_shape.set_deferred("disabled", true)
+	velocity = Vector2.ZERO
+	set_small_collider()
+	#hitbox.collision_layer = -1 
+	#colli.disabled = true  
+	
 	
 func walk_state(_delta):
 	velocity.x = SPEED * direction
 	
 	if wall_detector.is_colliding():
+		scale.x *= -1
+		direction *= -1
+		
+	if !ground_detector.is_colliding():
 		scale.x *= -1
 		direction *= -1
 	
@@ -53,3 +67,14 @@ func hurt_state(_delta):
 func take_damage():
 	go_to_hurt_state() 
  
+func set_small_collider():
+	colli.shape = colli.shape.duplicate()
+	
+	if colli.shape is CapsuleShape2D:
+		colli.shape.radius = 0
+		colli.shape.height = 0
+
+	colli.position.y = 15
+
+#func set_small_collider(): //também funciona, mas é menos preciso
+	#colli.scale = Vector2(0,0)

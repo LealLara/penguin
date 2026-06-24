@@ -204,4 +204,7 @@ position = Vector2(22, 141)
 [node name="Skeleton" parent="." unique_id=1708730189 instance=ExtResource("13_dabdc")]
 position = Vector2(203, 175)
 
+[node name="Skeleton2" parent="." unique_id=694968940 instance=ExtResource("13_dabdc")]
+position = Vector2(94, 147)
+
 [editable path="levelUp"]
