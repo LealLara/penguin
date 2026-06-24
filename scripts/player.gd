@@ -23,7 +23,7 @@ enum PlayerState{
 	fall,
 	duck,
 	slide,
-	dead	
+	hurt	
 }
 func _ready() -> void: 
 	go_to_idle_state()
@@ -46,8 +46,8 @@ func _physics_process(delta: float) -> void:
 			duck_state(delta)
 		PlayerState.slide:
 			slide_state(delta)
-		PlayerState.dead:
-			dead_state(delta)
+		PlayerState.hurt:
+			hurt_state(delta)
 	move_and_slide()
 
 func go_to_idle_state():
@@ -85,9 +85,9 @@ func exit_from_slide_state():
 	pass
 	set_large_collider()
 
-func go_to_dead_state():
-	status = PlayerState.dead
-	anim.play("dead")
+func go_to_hurt_state():
+	status = PlayerState.hurt
+	anim.play("hurt")
 	velocity.x = 0
 
 func idle_state(delta):
@@ -186,7 +186,7 @@ func slide_state(delta):
 		go_to_duck_state()
 		return 
 
-func dead_state(delta):
+func hurt_state(delta):
 	pass
 
 func move(delta):
@@ -228,4 +228,4 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		area.get_parent().take_damage()  
 		go_to_jump_state()
 	else:
-		go_to_dead_state()
+		go_to_hurt_state()

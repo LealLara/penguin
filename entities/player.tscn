@@ -86,17 +86,6 @@ region = Rect2(80, 0, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ef06p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_tjdhl")
-}],
-"loop": false,
-"name": &"dead",
-"speed": 2.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_8rie4")
 }],
 "loop": false,
@@ -110,6 +99,17 @@ animations = [{
 "loop": false,
 "name": &"fall",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ef06p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tjdhl")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -187,16 +187,20 @@ collision_mask = 25
 script = ExtResource("1_merdl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=443045069]
+z_index = 1
 shape = SubResource("CapsuleShape2D_rfe5m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2111992789]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_8rie4")
-animation = &"idle"
-autoplay = "dead"
+animation = &"hurt"
+autoplay = "hurt"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=425096486]
+z_index = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=302557831]
+z_index = 1
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_x08pd")
 debug_color = Color(0.8990572, 0.27340892, 0.4054005, 0.41960785)
