@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 enum SkeletonState{
 	walk,
+	attack,
 	hurt
 }
 @onready var colli : CollisionShape2D = $CollisionShape2D 
@@ -27,14 +28,20 @@ func _physics_process(delta: float) -> void:
 	match status:
 		SkeletonState.walk:
 			walk_state(delta)
+		SkeletonState.attack:
+			attack_state(delta)
 		SkeletonState.hurt:
 			hurt_state(delta)
+	
 
 	move_and_slide()
 
 func go_to_walk_state(): 
 	status = SkeletonState.walk
 	anim.play("walk")
+	
+func go_to_attack_state():
+	pass
 	
 func go_to_hurt_state():
 	status = SkeletonState.hurt
@@ -61,6 +68,10 @@ func walk_state(_delta):
 		scale.x *= -1
 		direction *= -1
 	
+	
+func attack_state(_delta):
+	pass
+
 func hurt_state(_delta):
 	pass
 	

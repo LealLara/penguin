@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var  aceleration = 400
 @export var  deceleration = 400
 @export var  slide_deceleration = 100
+@onready var timer: Timer = $ReloadTimer
 
 const JUMP_VELOCITY = -300.0
  
@@ -89,6 +90,7 @@ func go_to_hurt_state():
 	status = PlayerState.hurt
 	anim.play("hurt")
 	velocity.x = 0
+	timer.start()
 
 func idle_state(delta):
 	move(delta)
@@ -228,5 +230,10 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		area.get_parent().take_damage()  
 		go_to_jump_state()
 	else:
-		go_to_hurt_state()
+		if status != PlayerState.hurt:
+			go_to_hurt_state()
 	
+
+
+func _on_reload_timer_timeout() -> void:
+	get_tree().reload_current_scene()

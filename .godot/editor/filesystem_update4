@@ -1,7 +1,9 @@
-res://entities/skeleton.tscn
+res://entities/player.tscn
 res://tiles/grass.tres
 res://tiles/decoration.tres
-res://entities/player.tscn
-res://scripts/skeleton.gd
+res://entities/skeleton.tscn
 res://scripts/player.gd
+res://entities/spinning_bone.tscn
+res://entities/spinning_bone.gd
 res://scenes/forest.tscn
+res://scripts/skeleton.gd

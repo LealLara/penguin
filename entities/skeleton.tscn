@@ -1,12 +1,29 @@
 [gd_scene format=3 uid="uid://bg1iog234winf"]
 
 [ext_resource type="Script" uid="uid://cx1u44im6c4hx" path="res://scripts/skeleton.gd" id="1_yag7t"]
+[ext_resource type="Texture2D" uid="uid://xdexnrsq4m62" path="res://sprites/sprites-pack6/3 - Skeleton/Bone_Toss (32 x 32).png" id="2_4oc3b"]
 [ext_resource type="Texture2D" uid="uid://bg02rr76j8lx7" path="res://sprites/sprites-pack6/3 - Skeleton/Crumbling_Into_Bone_Pile (32 x 32).png" id="2_fpmxe"]
 [ext_resource type="Texture2D" uid="uid://dsp4wnu5xixrg" path="res://sprites/sprites-pack6/3 - Skeleton/Limping_Movement (32 x 32).png" id="3_4oc3b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6hr2a"]
-atlas = ExtResource("2_fpmxe")
+atlas = ExtResource("2_4oc3b")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0uhi"]
+atlas = ExtResource("2_4oc3b")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qgbw"]
+atlas = ExtResource("2_4oc3b")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjous"]
+atlas = ExtResource("2_4oc3b")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0f01p"]
+atlas = ExtResource("2_4oc3b")
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j31jw"]
 atlas = ExtResource("2_fpmxe")
@@ -63,6 +80,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_6hr2a")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_b0uhi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qgbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjous")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0f01p")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_j31jw")
 }, {
 "duration": 1.0,
@@ -82,7 +116,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"hurt",
-"speed": 7.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -113,31 +147,38 @@ radius = 7.0
 height = 24.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4oc3b"]
-size = Vector2(14, 26)
+size = Vector2(15, 26)
 
 [node name="Skeleton" type="CharacterBody2D" unique_id=1708730189]
 script = ExtResource("1_yag7t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=981587657]
 sprite_frames = SubResource("SpriteFrames_yag7t")
-animation = &"hurt"
-autoplay = "walk"
+animation = &"attack"
+frame_progress = 0.5065179
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=491117583]
+visible = false
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_fpmxe")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1464295789]
+visible = false
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1300676586]
-position = Vector2(1, 3)
+visible = false
+position = Vector2(0.5, 3)
 shape = SubResource("RectangleShape2D_4oc3b")
 debug_color = Color(0.9005111, 0.22424716, 0.55056745, 0.41960785)
 
 [node name="WallDetector" type="RayCast2D" parent="." unique_id=1366930554]
+visible = false
 position = Vector2(0, 14)
 target_position = Vector2(13, 0)
 
 [node name="GroundDetector" type="RayCast2D" parent="." unique_id=1604938428]
+visible = false
 position = Vector2(13, 0)
 target_position = Vector2(0, 19)
