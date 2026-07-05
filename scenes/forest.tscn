@@ -203,10 +203,10 @@ shape = SubResource("RectangleShape2D_j3csf")
 position = Vector2(22, 141)
 
 [node name="Skeleton" parent="." unique_id=1708730189 instance=ExtResource("13_dabdc")]
-position = Vector2(203, 175)
+position = Vector2(106, 161)
 
-[node name="Skeleton2" parent="." unique_id=694968940 instance=ExtResource("13_dabdc")]
-position = Vector2(94, 147)
+[node name="Skeleton2" parent="." unique_id=1993749483 instance=ExtResource("13_dabdc")]
+position = Vector2(266, 177)
 
 [node name="Skeleton3" parent="." unique_id=1250215890 instance=ExtResource("13_dabdc")]
 position = Vector2(506, 155)

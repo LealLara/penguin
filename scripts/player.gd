@@ -167,7 +167,7 @@ func fall_state(delta):
 		go_to_duck_state()
 		return 
 
-func duck_state(delta): 
+func duck_state(_delta): 
 	update_direction()
 	if Input.is_action_pressed("duck"):
 		go_to_duck_state()
@@ -188,7 +188,7 @@ func slide_state(delta):
 		go_to_duck_state()
 		return 
 
-func hurt_state(delta):
+func hurt_state(_delta):
 	pass
 
 func move(delta):
@@ -219,12 +219,6 @@ func set_small_collider():
 	collision_shape.shape.height = 8
 	collision_shape.position.y = 3
 
-func set_large_collider():
-	collision_shape.shape.radius = 6
-	collision_shape.shape.height = 14
-	collision_shape.position.y = 0
-
-
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if velocity.y > 0:
 		area.get_parent().take_damage()  
@@ -233,6 +227,12 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		if status != PlayerState.hurt:
 			go_to_hurt_state()
 	
+
+func set_large_collider():
+	collision_shape.shape.radius = 6
+	collision_shape.shape.height = 14
+	collision_shape.position.y = 0
+	return 
 
 
 func _on_reload_timer_timeout() -> void:
