@@ -161,7 +161,7 @@ visible = false
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_fpmxe")
 
-[node name="Hitbox" type="Area2D" parent="." unique_id=1464295789]
+[node name="Hitbox" type="Area2D" parent="." unique_id=1464295789 groups=["Enemies"]]
 visible = false
 collision_layer = 4
 collision_mask = 2
@@ -184,7 +184,7 @@ target_position = Vector2(0, 19)
 
 [node name="PlayerDetector" type="RayCast2D" parent="." unique_id=1755743049]
 position = Vector2(4, 10)
-target_position = Vector2(32, 0)
+target_position = Vector2(48, 0)
 collision_mask = 2
 
 [node name="BoneStartPosition" type="Node2D" parent="." unique_id=895415095]

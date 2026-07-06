@@ -180,7 +180,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x08pd"]
 size = Vector2(16, 15)
 
-[node name="player" type="CharacterBody2D" unique_id=410979275]
+[node name="player" type="CharacterBody2D" unique_id=410979275 groups=["player"]]
 z_index = 1
 collision_layer = 2
 collision_mask = 29
@@ -198,14 +198,14 @@ autoplay = "hurt"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=425096486]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=302557831]
 light_mask = 2
 visibility_layer = 4
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_x08pd")
-debug_color = Color(0.8990572, 0.27340892, 0.4054005, 0.41960785)
+debug_color = Color(0.0871, 0.67, 0.10652999, 0.41960785)
 
 [node name="ReloadTimer" type="Timer" parent="." unique_id=364696996]
 one_shot = true

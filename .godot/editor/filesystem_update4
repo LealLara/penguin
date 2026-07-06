@@ -5,3 +5,5 @@ res://tiles/decoration.tres
 res://scripts/spinning_bone.gd
 res://entities/skeleton.tscn
 res://entities/spinning_bone.tscn
+res://entities/player.tscn
+res://scripts/player.gd

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var hitbox_collision_shape: CollisionShape2D = $Hitbox/CollisionShape2D
 @export var  max_speed = 180.0
 @export var  aceleration = 400
 @export var  deceleration = 400
@@ -60,7 +61,7 @@ func go_to_walk_state():
 	anim.play("walk")
 
 func go_to_jump_state():
-	status = PlayerState.jump
+	status = PlayerState.jump 
 	anim.play("jump")
 	velocity.y = JUMP_VELOCITY
 	jump_count += 1 
@@ -83,7 +84,6 @@ func go_to_slide_state():
 	set_small_collider()
 	
 func exit_from_slide_state():
-	pass
 	set_large_collider()
 
 func go_to_hurt_state():
@@ -92,6 +92,23 @@ func go_to_hurt_state():
 	velocity.x = 0
 	timer.start()
 
+func set_large_collider():
+	collision_shape.shape.radius = 6
+	collision_shape.shape.height = 14
+	collision_shape.position.y = 0
+	hitbox_collision_shape.shape.size.y = 14
+	hitbox_collision_shape.position.y = 0
+	return
+ 
+func set_small_collider():
+	collision_shape.shape.radius = 5
+	collision_shape.shape.height = 8
+	collision_shape.position.y = 3
+	
+	hitbox_collision_shape.shape.size.y = 8
+	hitbox_collision_shape.position.y = 3 
+	return 
+ 
 func idle_state(delta):
 	move(delta)
 	if velocity.x !=0:
@@ -188,7 +205,7 @@ func slide_state(delta):
 		go_to_duck_state()
 		return 
 
-func hurt_state(_delta):
+func hurt_state(_delta): 
 	pass
 
 func move(delta):
@@ -214,26 +231,22 @@ func update_direction():
 func can_jump() -> bool:
 	return jump_count < max_jump_count
 
-func set_small_collider():
-	collision_shape.shape.radius = 5
-	collision_shape.shape.height = 8
-	collision_shape.position.y = 3
-
 func _on_hitbox_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Enemies"):
+		hit_enemy(area)
+	elif area.is_in_group("LethalArea"):
+		hit_lethal_area()
+
+func hit_enemy(area: Area2D):
 	if velocity.y > 0:
-		area.get_parent().take_damage()  
+		area.get_parent().take_damage()   
 		go_to_jump_state()
 	else:
-		if status != PlayerState.hurt:
+		if status != PlayerState.hurt: 
 			go_to_hurt_state()
-	
 
-func set_large_collider():
-	collision_shape.shape.radius = 6
-	collision_shape.shape.height = 14
-	collision_shape.position.y = 0
-	return 
-
+func hit_lethal_area():
+	go_to_hurt_state()
 
 func _on_reload_timer_timeout() -> void:
 	get_tree().reload_current_scene()
