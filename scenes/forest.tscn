@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://bbud3nl33jgw5" path="res://entities/player.tscn" id="12_dabdc"]
 [ext_resource type="PackedScene" uid="uid://cf6xechdihgrd" path="res://entities/level_up.tscn" id="12_j3csf"]
 [ext_resource type="PackedScene" uid="uid://bg1iog234winf" path="res://entities/skeleton.tscn" id="13_dabdc"]
-[ext_resource type="PackedScene" uid="uid://b5y3wut3rrwoe" path="res://entities/spinning_bone.tscn" id="14_cf55d"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ercsu"]
 tile_data = PackedInt32Array(0, 196611, 5, 65536, 196611, 5, 131072, 196611, 5, 1, 262147, 5, 65537, 262147, 5, 131073, 262147, 5, 2, 327683, 5, 65538, 327683, 5, 131074, 327683, 5)
@@ -101,6 +100,9 @@ pattern_0 = SubResource("TileMapPattern_ercsu")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3csf"]
 size = Vector2(8, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf55d"]
+size = Vector2(1261, 4.75)
 
 [node name="Forest" type="Node2D" unique_id=296437433]
 metadata/_edit_vertical_guides_ = [701.0]
@@ -211,7 +213,14 @@ position = Vector2(266, 177)
 [node name="Skeleton3" parent="." unique_id=1250215890 instance=ExtResource("13_dabdc")]
 position = Vector2(506, 155)
 
-[node name="SpinningBone" parent="." unique_id=2014676106 instance=ExtResource("14_cf55d")]
-position = Vector2(231, 156)
+[node name="levelTropic" parent="." unique_id=1417565348 instance=ExtResource("12_j3csf")]
+position = Vector2(4686, 120)
+next_level = "tropicalia"
+
+[node name="CollisionShape2D" parent="levelTropic" index="0" unique_id=1405238451]
+position = Vector2(-4093.5, 84.625)
+shape = SubResource("RectangleShape2D_cf55d")
+debug_color = Color(0.15576082, 0.56342214, 0.8457337, 0.41960785)
 
 [editable path="levelUp"]
+[editable path="levelTropic"]

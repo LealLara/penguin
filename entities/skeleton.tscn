@@ -116,7 +116,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"hurt",
-"speed": 6.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -155,8 +155,6 @@ script = ExtResource("1_yag7t")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=981587657]
 sprite_frames = SubResource("SpriteFrames_yag7t")
 animation = &"attack"
-frame = 4
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=491117583]
 visible = false
@@ -188,5 +186,8 @@ target_position = Vector2(0, 19)
 position = Vector2(4, 10)
 target_position = Vector2(32, 0)
 collision_mask = 2
+
+[node name="BoneStartPosition" type="Node2D" parent="." unique_id=895415095]
+position = Vector2(16, -1)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
