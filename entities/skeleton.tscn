@@ -154,7 +154,7 @@ script = ExtResource("1_yag7t")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=981587657]
 sprite_frames = SubResource("SpriteFrames_yag7t")
 animation = &"walk"
-frame_progress = 0.8564113
+frame_progress = 0.16739644
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=491117583]
 position = Vector2(2, 4)
@@ -168,7 +168,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1300676586]
-position = Vector2(2, 3.5)
+position = Vector2(2, 4)
 shape = SubResource("CapsuleShape2D_4oc3b")
 debug_color = Color(0.9005111, 0.22424716, 0.55056745, 0.41960785)
 

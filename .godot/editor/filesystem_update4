@@ -2,3 +2,4 @@ res://entities/skeleton.tscn
 res://tiles/grass.tres
 res://tiles/decoration.tres
 res://scripts/player.gd
+res://scenes/forest.tscn
