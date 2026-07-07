@@ -189,6 +189,7 @@ func duck_state(_delta):
 	if Input.is_action_pressed("duck"):
 		go_to_duck_state()
 		return  
+	exit_from_duck_state()
 	go_to_idle_state()
 	return 
 
