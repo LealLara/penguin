@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cptqxnfc1fsvd" path="res://sprites/autumn forest/Background parts/1 - Leaf_top.png" id="8_qm7rg"]
 [ext_resource type="PackedScene" uid="uid://c3shisuxbba0q" path="res://entities/camera.tscn" id="9_0nboi"]
 [ext_resource type="Texture2D" uid="uid://bv53aedie6xuu" path="res://sprites/autumn forest/Terrain (16 x 16).png" id="9_3knxq"]
-[ext_resource type="Texture2D" uid="uid://b4ao5nrqxd4pj" path="res://sprites/tiles/Lava_frames (16 x 32).png" id="11_cf55d"]
+[ext_resource type="TileSet" uid="uid://cc8dx7up6jtyw" path="res://tiles/lava.tres" id="11_cf55d"]
 [ext_resource type="TileSet" uid="uid://bwo55gy7t3vrd" path="res://tiles/decoration.tres" id="11_ercsu"]
 [ext_resource type="PackedScene" uid="uid://bbud3nl33jgw5" path="res://entities/player.tscn" id="12_dabdc"]
 [ext_resource type="PackedScene" uid="uid://cf6xechdihgrd" path="res://entities/level_up.tscn" id="12_j3csf"]
@@ -98,27 +98,6 @@ texture = ExtResource("9_3knxq")
 [sub_resource type="TileSet" id="TileSet_dabdc"]
 sources/0 = SubResource("TileSetAtlasSource_j3csf")
 pattern_0 = SubResource("TileMapPattern_ercsu")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cf55d"]
-texture = ExtResource("11_cf55d")
-0:0/animation_frame_0/duration = 0.1
-0:0/animation_frame_1/duration = 0.1
-0:0/animation_frame_2/duration = 0.1
-0:0/animation_frame_3/duration = 0.1
-0:0/0 = 0
-0:0/0/z_index = 2
-0:1/animation_frame_0/duration = 0.1
-0:1/animation_frame_1/duration = 0.1
-0:1/animation_frame_2/duration = 0.1
-0:1/animation_frame_3/duration = 0.1
-0:1/0 = 0
-0:1/0/z_index = 2
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.0021877, 8, 1.828085, 8, 8, -8, 8)
-
-[sub_resource type="TileSet" id="TileSet_di0nb"]
-physics_layer_0/collision_layer = 16
-physics_layer_0/collision_mask = 2
-sources/0 = SubResource("TileSetAtlasSource_cf55d")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3csf"]
 size = Vector2(5, 177)
@@ -219,7 +198,7 @@ tile_set = ExtResource("11_ercsu")
 [node name="lava" type="TileMapLayer" parent="TyleMaps" unique_id=619546758 groups=["LethalArea"]]
 z_index = 2
 tile_map_data = PackedByteArray("AAABAAsAAAAAAAAAAAACAAsAAAAAAAAAAAADAAsAAAAAAAAAAAAEAAsAAAAAAAAAAAAFAAsAAAAAAAAAAAABAAwAAAAAAAEAAAACAAwAAAAAAAEAAAADAAwAAAAAAAEAAAAEAAwAAAAAAAEAAAAFAAwAAAAAAAEAAAAbAAsAAAAAAAAAAAAcAAsAAAAAAAAAAAAdAAsAAAAAAAAAAAAeAAsAAAAAAAAAAAAfAAsAAAAAAAAAAAAbAAwAAAAAAAEAAAAcAAwAAAAAAAEAAAAdAAwAAAAAAAEAAAAeAAwAAAAAAAEAAAAfAAwAAAAAAAEAAAA=")
-tile_set = SubResource("TileSet_di0nb")
+tile_set = ExtResource("11_cf55d")
 
 [node name="levelUp" parent="." unique_id=1121360858 instance=ExtResource("12_j3csf")]
 position = Vector2(680, 182)
