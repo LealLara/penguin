@@ -29,11 +29,12 @@ animations = [{
 size = Vector2(190, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmjdo"]
-size = Vector2(53, 108.5)
+size = Vector2(9, 211)
 
 [node name="home" type="Node2D" unique_id=1410612698]
 
 [node name="Camera" parent="." unique_id=1128463936 instance=ExtResource("7_ip4d6")]
+position = Vector2(10, 81)
 
 [node name="background" type="Node2D" parent="." unique_id=443075239]
 
@@ -115,16 +116,14 @@ next_level = "tropicalia"
 position = Vector2(85, -4)
 shape = SubResource("RectangleShape2D_hhep5")
 
-[node name="player" parent="." unique_id=410979275 groups=["player"] instance=ExtResource("1_mahjx")]
+[node name="player" parent="." unique_id=410979275 instance=ExtResource("1_mahjx")]
 position = Vector2(12, 53)
 
-[node name="levelTropic2" parent="." unique_id=1981838156 instance=ExtResource("10_hhep5")]
-position = Vector2(4686, 120)
-next_level = "tropicalia"
+[node name="Limit" type="StaticBody2D" parent="." unique_id=305801676]
+collision_mask = 6
 
-[node name="CollisionShape2D" parent="levelTropic2" index="0" unique_id=1405238451]
-position = Vector2(-4711, 35)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limit" unique_id=450007219]
+position = Vector2(-1, 96)
 shape = SubResource("RectangleShape2D_cmjdo")
 
 [editable path="levelTropic"]
-[editable path="levelTropic2"]

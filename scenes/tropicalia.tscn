@@ -29,14 +29,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_onqww"]
-size = Vector2(10, 197)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdksp"]
 size = Vector2(14, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6uml4"]
-size = Vector2(4262, 15)
+size = Vector2(8.000023, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17qnm"]
+size = Vector2(4, 216)
 
 [node name="Tropicalia" type="Node2D" unique_id=893553404]
 script = SubResource("GDScript_qufgo")
@@ -118,18 +118,10 @@ tile_set = ExtResource("8_jas1l")
 [node name="Skeleton" parent="TyleMaps" unique_id=906296337 instance=ExtResource("8_cdksp")]
 position = Vector2(407, 112)
 
-[node name="levelHome" parent="." unique_id=1121360858 instance=ExtResource("10_6ffp5")]
-position = Vector2(412, 117)
-next_level = "home"
-
-[node name="CollisionShape2D" parent="levelHome" index="0" unique_id=1405238451]
-position = Vector2(3855, -18.5)
-shape = SubResource("RectangleShape2D_onqww")
-debug_color = Color(0.547127, 0.56477964, 0.093797244, 0.41960785)
-
 [node name="Camera" parent="." unique_id=1128463936 instance=ExtResource("9_65baw")]
+position = Vector2(5, 162)
 
-[node name="player" parent="." unique_id=410979275 groups=["player"] instance=ExtResource("11_cdksp")]
+[node name="player" parent="." unique_id=410979275 instance=ExtResource("11_cdksp")]
 position = Vector2(6, 21)
 
 [node name="levelForest" parent="." unique_id=1766631452 instance=ExtResource("11_onqww")]
@@ -139,15 +131,21 @@ position = Vector2(600, 168)
 position = Vector2(3, 5.5)
 shape = SubResource("RectangleShape2D_cdksp")
 
-[node name="levelHome2" parent="." unique_id=1549982915 instance=ExtResource("10_6ffp5")]
-position = Vector2(824, 234)
+[node name="levelHome" parent="." unique_id=1549982915 instance=ExtResource("10_6ffp5")]
+position = Vector2(838, 232)
 next_level = "home"
 
-[node name="CollisionShape2D" parent="levelHome2" index="0" unique_id=1405238451]
-position = Vector2(1311, -31.5)
+[node name="CollisionShape2D" parent="levelHome" index="0" unique_id=1405238451]
+position = Vector2(3428, -102)
 shape = SubResource("RectangleShape2D_6uml4")
 debug_color = Color(0.547127, 0.56477964, 0.093797244, 0.41960785)
 
-[editable path="levelHome"]
+[node name="Limit" type="StaticBody2D" parent="." unique_id=1236130949]
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limit" unique_id=541492055]
+position = Vector2(-2, 98)
+shape = SubResource("RectangleShape2D_17qnm")
+
 [editable path="levelForest"]
-[editable path="levelHome2"]
+[editable path="levelHome"]
