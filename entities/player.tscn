@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dbrpwvu5hqsqk" path="res://sprites/penguin/Lying_On_Ground (16 x 16).png" id="3_tjdhl"]
 [ext_resource type="Texture2D" uid="uid://e6yw4o5fsjg" path="res://sprites/penguin/Waddling (16 x 16).png" id="4_qly61"]
 [ext_resource type="Texture2D" uid="uid://cg6yo1ptgooot" path="res://sprites/penguin/Belly_Sliding (16 x 16).png" id="6_6nm46"]
+[ext_resource type="Texture2D" uid="uid://bj6jbmt3xjv5v" path="res://sprites/penguin/Wall_Slide (16x16).png" id="10_tjdhl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rfe5m"]
 radius = 7.0
@@ -81,6 +82,22 @@ region = Rect2(64, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_oprnr"]
 atlas = ExtResource("4_qly61")
 region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cicqb"]
+atlas = ExtResource("10_tjdhl")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj0ki"]
+atlas = ExtResource("10_tjdhl")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fruft"]
+atlas = ExtResource("10_tjdhl")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slxql"]
+atlas = ExtResource("10_tjdhl")
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8rie4"]
 animations = [{
@@ -175,6 +192,23 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cicqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hj0ki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fruft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slxql")
+}],
+"loop": true,
+"name": &"wall",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x08pd"]
@@ -193,7 +227,7 @@ shape = SubResource("CapsuleShape2D_rfe5m")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2111992789]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_8rie4")
-animation = &"hurt"
+animation = &"wall"
 autoplay = "hurt"
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=425096486]
@@ -209,6 +243,14 @@ debug_color = Color(0.0871, 0.67, 0.10652999, 0.41960785)
 
 [node name="ReloadTimer" type="Timer" parent="." unique_id=364696996]
 one_shot = true
+
+[node name="LeftWallDetector" type="RayCast2D" parent="." unique_id=1314693470]
+z_index = 8
+target_position = Vector2(-8, 0)
+
+[node name="RightWallDetector" type="RayCast2D" parent="." unique_id=753240715]
+z_index = 8
+target_position = Vector2(8, 0)
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

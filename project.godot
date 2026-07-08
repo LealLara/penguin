@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="penguin"
-run/main_scene="uid://b7k3r7u08j0wy"
+run/main_scene="uid://qnb61stcgdp8"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
