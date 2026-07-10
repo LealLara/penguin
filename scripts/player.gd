@@ -18,6 +18,7 @@ extends CharacterBody2D
 @export var water_acceleration = 200
 @export var water_max_enter_speed = 150
 @export var water_min_enter_speed = 100
+@export var water_jump_force = -100
 const JUMP_VELOCITY = -300.0
  
 const SPEED = 70.0
@@ -272,11 +273,11 @@ func swimming_state(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, water_acceleration * delta)
 	
-	velocity.y += wall_acceleration * delta
+	velocity.y += water_acceleration * delta
 	velocity.y = min(velocity.y, water_max_speed)
 	
 	if Input.is_action_just_pressed("jump"):
-		velocity.y = -100
+		velocity.y = water_jump_force
 	
 	#var vertical_direction = Input.get_axis("jump","duck")
 	#if vertical_direction:

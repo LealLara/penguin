@@ -8,3 +8,4 @@ res://entities/skeleton.tscn
 res://scripts/player.gd
 res://tiles/underwater.tres
 res://scenes/forest.tscn
+res://entities/moving_platform.tscn

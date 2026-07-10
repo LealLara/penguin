@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cmo8nxgotax71"]
+
+[ext_resource type="Texture2D" uid="uid://bk2wolfab7no7" path="res://sprites/tiles/Blocks (16 x 16).png" id="1_o5dde"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gp4lh"]
+size = Vector2(32, 16)
+
+[node name="movingPlatform" type="AnimatableBody2D" unique_id=1449758064]
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1867636228]
+texture = ExtResource("1_o5dde")
+region_enabled = true
+region_rect = Rect2(96, 64, 32, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1097437424]
+shape = SubResource("RectangleShape2D_gp4lh")
+one_way_collision = true
