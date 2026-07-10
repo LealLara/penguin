@@ -31,6 +31,7 @@ project/assembly_name="penguin"
 player="pinguino"
 Enemies="grupinho dos inimigos"
 LethalArea="grupo da area de dano"
+Water="swimming time"
 
 [input]
 
@@ -93,12 +94,13 @@ duck={
 2d_physics/layer_3="enemies"
 2d_physics/layer_4="levelUp"
 2d_physics/layer_5="lethal_area"
-2d_physics/layer_6="health"
+2d_physics/layer_6="water"
 2d_physics/layer_7="food"
 2d_physics/layer_8="wood"
 2d_physics/layer_9="potions"
 2d_physics/layer_10="meat"
 2d_physics/layer_11="coins"
+2d_physics/layer_12="health"
 
 [physics]
 

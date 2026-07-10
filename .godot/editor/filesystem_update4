@@ -1,9 +1,10 @@
-res://scenes/forest.tscn
+res://scenes/tropicalia.tscn
 res://tiles/grass.tres
 res://tiles/decoration.tres
-res://scripts/player.gd
+res://tiles/lava.tres
+res://scenes/home.tscn
 res://entities/player.tscn
 res://entities/skeleton.tscn
-res://scripts/skeleton.gd
-res://scenes/home.tscn
-res://scenes/tropicalia.tscn
+res://scripts/player.gd
+res://tiles/underwater.tres
+res://scenes/forest.tscn

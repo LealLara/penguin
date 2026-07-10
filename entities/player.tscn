@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dbrpwvu5hqsqk" path="res://sprites/penguin/Lying_On_Ground (16 x 16).png" id="3_tjdhl"]
 [ext_resource type="Texture2D" uid="uid://e6yw4o5fsjg" path="res://sprites/penguin/Waddling (16 x 16).png" id="4_qly61"]
 [ext_resource type="Texture2D" uid="uid://cg6yo1ptgooot" path="res://sprites/penguin/Belly_Sliding (16 x 16).png" id="6_6nm46"]
+[ext_resource type="Texture2D" uid="uid://dwj0t748okbnk" path="res://sprites/penguin/Swimming (16 x 16).png" id="9_x08pd"]
 [ext_resource type="Texture2D" uid="uid://bj6jbmt3xjv5v" path="res://sprites/penguin/Wall_Slide (16x16).png" id="10_tjdhl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rfe5m"]
@@ -58,6 +59,22 @@ region = Rect2(16, 0, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_28s6d"]
 atlas = ExtResource("6_6nm46")
 region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evlff"]
+atlas = ExtResource("9_x08pd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7db53"]
+atlas = ExtResource("9_x08pd")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plaij"]
+atlas = ExtResource("9_x08pd")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ib8tg"]
+atlas = ExtResource("9_x08pd")
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x08pd"]
 atlas = ExtResource("4_qly61")
@@ -172,6 +189,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_evlff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7db53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plaij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ib8tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plaij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7db53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evlff")
+}],
+"loop": true,
+"name": &"swimming",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_x08pd")
 }, {
 "duration": 1.0,
@@ -217,26 +260,29 @@ size = Vector2(16, 15)
 [node name="player" type="CharacterBody2D" unique_id=410979275 groups=["player"]]
 z_index = 1
 collision_layer = 2
-collision_mask = 29
+collision_mask = 13
 script = ExtResource("1_merdl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=443045069]
+visible = false
 z_index = 2
 shape = SubResource("CapsuleShape2D_rfe5m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2111992789]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_8rie4")
-animation = &"wall"
-autoplay = "hurt"
+animation = &"swimming"
+frame = 6
+frame_progress = 1.0
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=425096486]
+visible = false
 collision_layer = 2
-collision_mask = 20
+collision_mask = 52
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=302557831]
-light_mask = 2
-visibility_layer = 4
+light_mask = 0
+visibility_layer = 0
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_x08pd")
 debug_color = Color(0.0871, 0.67, 0.10652999, 0.41960785)
@@ -245,13 +291,16 @@ debug_color = Color(0.0871, 0.67, 0.10652999, 0.41960785)
 one_shot = true
 
 [node name="LeftWallDetector" type="RayCast2D" parent="." unique_id=1314693470]
+visible = false
 z_index = 8
 target_position = Vector2(-8, 0)
 
 [node name="RightWallDetector" type="RayCast2D" parent="." unique_id=753240715]
+visible = false
 z_index = 8
 target_position = Vector2(8, 0)
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
 [connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]

@@ -14,6 +14,10 @@ extends CharacterBody2D
 @export var right_direction = 1
 @export var wall_acceleration = 40
 @export var wall_jump_velocity = 240
+@export var water_max_speed = 100
+@export var water_acceleration = 200
+@export var water_max_enter_speed = 150
+@export var water_min_enter_speed = 100
 const JUMP_VELOCITY = -300.0
  
 const SPEED = 70.0
@@ -31,7 +35,8 @@ enum PlayerState{
 	duck,
 	slide,
 	wall,
-	hurt	
+	swimming,
+	hurt
 }
 func _ready() -> void: 
 	go_to_idle_state()
@@ -52,6 +57,8 @@ func _physics_process(delta: float) -> void:
 			slide_state(delta)
 		PlayerState.wall:
 			wall_state(delta)
+		PlayerState.swimming:
+			swimming_state(delta)
 		PlayerState.hurt:
 			hurt_state(delta)
 	move_and_slide()
@@ -86,10 +93,10 @@ func go_to_slide_state():
 	status = PlayerState.slide
 	anim.play("slide")
 	set_small_collider()
-	
+
 func exit_from_slide_state():
 	set_large_collider()
-	
+
 func go_to_wall_state():
 	status = PlayerState.wall
 	anim.play("wall")
@@ -104,6 +111,12 @@ func go_to_hurt_state():
 	anim.play("hurt")
 	velocity.x = 0
 	timer.start()
+
+func go_to_swimming_state():
+	status = PlayerState.swimming
+	anim.play("swimming")
+	#velocity.y = min(velocity.y, water_min_enter_speed)
+	#velocity.y = max(velocity.y, water_max_enter_speed)
 
 func set_large_collider():
 	collision_shape.shape.radius = 6
@@ -250,7 +263,26 @@ func wall_state(delta):
 		velocity.x = wall_jump_velocity * direction
 		go_to_jump_state()
 		return
+
+func swimming_state(delta):
+	update_direction()
 	
+	if direction:
+		velocity.x = move_toward(velocity.x, water_max_speed * direction, water_acceleration * delta)
+	else:
+		velocity.x = move_toward(velocity.x, 0, water_acceleration * delta)
+	
+	velocity.y += wall_acceleration * delta
+	velocity.y = min(velocity.y, water_max_speed)
+	
+	if Input.is_action_just_pressed("jump"):
+		velocity.y = -100
+	
+	#var vertical_direction = Input.get_axis("jump","duck")
+	#if vertical_direction:
+		#velocity.y =  move_toward(velocity.y, water_max_speed * vertical_direction, water_acceleration * delta)
+	#else:
+		#velocity.y = move_toward(velocity.y, 0, water_acceleration * delta)
 
 func hurt_state(delta): 
 	apply_gravity(delta)
@@ -289,6 +321,10 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		hit_lethal_area()
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Water"):
+		jump_count = 0
+		go_to_swimming_state()
+		
 	if body.is_in_group("LethalArea"):
 		go_to_hurt_state()
 
@@ -298,10 +334,13 @@ func hit_enemy(area: Area2D):
 		go_to_jump_state()
 	else:
 		go_to_hurt_state()
-	
 
 func hit_lethal_area():
 	go_to_hurt_state()
 
 func _on_reload_timer_timeout() -> void:
 	get_tree().reload_current_scene()
+
+func _on_hitbox_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Water"):
+		go_to_jump_state()
