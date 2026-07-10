@@ -1,11 +1,7 @@
-res://scenes/tropicalia.tscn
+res://entities/moving_platform.tscn
 res://tiles/grass.tres
 res://tiles/decoration.tres
 res://tiles/lava.tres
-res://scenes/home.tscn
-res://entities/player.tscn
-res://entities/skeleton.tscn
-res://scripts/player.gd
 res://tiles/underwater.tres
-res://scenes/forest.tscn
-res://entities/moving_platform.tscn
+res://scripts/moving_platform.gd
+res://scenes/tropicalia.tscn
