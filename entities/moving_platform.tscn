@@ -15,6 +15,12 @@ texture = ExtResource("1_o5dde")
 region_enabled = true
 region_rect = Rect2(96, 64, 32, 16)
 
+[node name="Target" type="Sprite2D" parent="." unique_id=1779730454]
+modulate = Color(1, 1, 1, 0.6509804)
+texture = ExtResource("1_o5dde")
+region_enabled = true
+region_rect = Rect2(96, 64, 32, 16)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1097437424]
 shape = SubResource("RectangleShape2D_gp4lh")
 one_way_collision = true

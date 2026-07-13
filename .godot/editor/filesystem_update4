@@ -1,7 +1,9 @@
-res://entities/moving_platform.tscn
 res://tiles/grass.tres
 res://tiles/decoration.tres
 res://tiles/lava.tres
 res://tiles/underwater.tres
-res://scripts/moving_platform.gd
-res://scenes/tropicalia.tscn
+res://entities/spinning_bone.tscn
+res://entities/player.tscn
+res://scenes/forest.tscn
+res://entities/broken_block.tscn
+res://scripts/broken_block.gd
